@@ -18,6 +18,8 @@
 <meta name="theme-color" content="#FBF6EC">
 <!-- Metaピクセル（データセット）のID。空のままなら計測タグは読み込まない -->
 <meta name="meta-pixel-id" content="">
+<!-- 申込の受け方：lp＝このページのフォームから送る／google＝Googleフォームを開く -->
+<meta name="entry-mode" content="google">
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -642,6 +644,8 @@ section{scroll-margin-top:72px}
 .privacy{font-size:12.5px;color:var(--ink-2);line-height:1.7}
 .entry-submit{width:100%}
 .entry-submit[disabled]{opacity:.6;cursor:wait;transform:none;box-shadow:0 5px 0 var(--ink)}
+.entry-alt{display:grid;justify-items:center;gap:12px;text-align:center}
+.entry-alt .btn{width:100%}
 .entry-done{display:grid;justify-items:center;gap:12px;text-align:center;padding-block:8px}
 .entry-done:focus{outline:none}
 .entry-done,.entry-form .field{scroll-margin-top:96px}
@@ -1149,6 +1153,12 @@ section{scroll-margin-top:72px}
           <p class="facts-line"><span class="nw">2026年11月7日（土）</span> <span class="nw">金沢市営中央市民体育館</span><br><span class="nw">参加費無料・先着200名</span> <span class="nw">申込締切 11月5日（木）</span></p>
         </div>
 
+        <div class="entry-alt" id="entry-alt" hidden>
+          <p>下の<wbr>ボタンから<wbr>Googleフォームを<wbr>開き、<wbr>お申し込みください。<wbr>ご家族単位で<wbr>1回、<wbr>代表の<wbr>保護者の<wbr>方が<wbr>お申し込みください。</p>
+          <a class="btn btn--lg" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">申込フォームを<wbr>開く<span class="arrow" aria-hidden="true">→</span></a>
+          <p class="hint">Googleフォームが<wbr>開きます。</p>
+        </div>
+
         <form id="entry-form" class="entry-form" novalidate>
           <p class="form-note">ご家族単位で<wbr>1回、<wbr>代表の<wbr>保護者の<wbr>方が<wbr>お申し込みください。</p>
 
@@ -1349,6 +1359,15 @@ section{scroll-margin-top:72px}
 
   var form = document.getElementById('entry-form');
   if (!form) return;
+  if ((document.querySelector('meta[name="entry-mode"]') || {}).content === 'google') {
+    form.hidden = true;
+    document.getElementById('entry-alt').hidden = false;
+    document.querySelector('.fallback').hidden = true;
+    [].forEach.call(document.querySelectorAll('#entry-alt a'), function (a) {
+      a.addEventListener('click', function () { track('Lead'); });
+    });
+    return;
+  }
   function $(id) { return document.getElementById(id); }
   function val(id) { return $(id).value.trim(); }
 
