@@ -16,6 +16,8 @@
 <meta property="og:site_name" content="カラダを動かすって TANO C!!">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FBF6EC">
+<!-- Metaピクセル（データセット）のID。空のままなら計測タグは読み込まない -->
+<meta name="meta-pixel-id" content="">
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,6 +71,7 @@ body{
   overflow-x:hidden;
 }
 img{max-width:100%;height:auto;display:block}
+[hidden]{display:none!important}
 a{color:inherit}
 h1,h2,h3,h4{margin:0;line-height:1.35;text-wrap:balance}
 /* Japanese line breaking that works in every browser: tools/add-wbr.py puts <wbr> between phrases,
@@ -594,13 +597,64 @@ section{scroll-margin-top:72px}
 .closing{position:relative;isolation:isolate;overflow:hidden;text-align:center}
 .closing .blob--orange{top:auto;bottom:-40%;right:-18vw}
 .closing .blob--teal{top:auto;bottom:-30%;left:-16vw}
-.closing-card{
+.entry-card{
   background:var(--paper);border:3px solid var(--ink);border-radius:var(--radius-panel);
-  padding:clamp(28px,5vw,52px) clamp(18px,4vw,48px);display:grid;justify-items:center;gap:16px;max-width:760px;margin-inline:auto;
-  box-shadow:0 8px 0 var(--ink);
+  padding:clamp(24px,5vw,48px) clamp(18px,4vw,48px);display:grid;gap:22px;max-width:720px;margin-inline:auto;
+  box-shadow:0 8px 0 var(--ink);text-align:left;
 }
-.closing-card .hand{font-family:var(--f-hand);font-size:clamp(20px,3vw,28px);line-height:1.4}
-.closing-card .facts-line{font-weight:700;font-size:15px;color:var(--ink-2)}
+.entry-head{display:grid;justify-items:center;gap:8px;text-align:center}
+.entry-head img{width:min(100%,300px)}
+.entry-head .hand{font-family:var(--f-hand);font-size:clamp(18px,2.6vw,24px);line-height:1.4}
+.entry-head h2{font-size:clamp(24px,3.4vw,32px);font-weight:900}
+.entry-head .facts-line{font-weight:700;font-size:14.5px;color:var(--ink-2);line-height:1.7}
+.entry-form{display:grid;gap:20px}
+.form-note{font-weight:700;font-size:15px;background:var(--cream);border-radius:12px;padding:10px 14px}
+.field{display:grid;gap:8px;border:0;margin:0;padding:0;min-width:0}
+.field > label,.field legend,.check-title{font-weight:900;font-size:16px;line-height:1.5;padding:0}
+.ftag{display:inline-block;vertical-align:.12em;margin-left:8px;font-size:11.5px;font-weight:900;line-height:1.7;padding:0 .6em;border-radius:6px;letter-spacing:.04em;white-space:nowrap}
+.ftag--req{background:var(--orange-text);color:#fff}
+.ftag--opt{background:var(--line);color:var(--ink-2)}
+.entry-form input[type=text],.entry-form input[type=email],.entry-form input[type=number],.entry-form select,.entry-form textarea{
+  -webkit-appearance:none;appearance:none;width:100%;font:inherit;font-size:16px;color:var(--ink);
+  background-color:var(--paper);border:2px solid #D9CBB8;border-radius:12px;padding:12px 14px;line-height:1.5;
+}
+.entry-form select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+.entry-form textarea{resize:vertical;min-height:88px}
+.entry-form :is(input,select,textarea):focus{outline:none;border-color:var(--teal-strong);box-shadow:0 0 0 3px var(--teal-soft)}
+.entry-form .is-invalid{border-color:var(--orange-text)!important;background-color:#FFF8F3!important}
+.child-row{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+@media (min-width:560px){.child-row{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);grid-template-rows:auto auto;grid-auto-flow:column;column-gap:12px}}
+.sub-label{font-size:13px;font-weight:700;color:var(--ink-2)}
+.add-child{justify-self:start;font:inherit;font-weight:900;font-size:15px;color:var(--teal-strong);background:var(--teal-soft);border:2px dashed var(--teal-line);border-radius:12px;padding:10px 16px;cursor:pointer}
+.total-row{display:flex;align-items:center;gap:10px;font-weight:900}
+.total-row input{max-width:120px}
+.hint{font-size:13px;color:var(--ink-2);line-height:1.6}
+.chip-btn{justify-self:start;font:inherit;font-size:13px;font-weight:700;color:var(--ink);background:var(--cream);border:1.5px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer}
+.field--check{background:var(--cream);border-radius:14px;padding:14px 16px}
+.check-desc{font-size:13.5px;color:var(--ink-2);line-height:1.7}
+.check{display:flex;align-items:flex-start;gap:10px;font-weight:900;font-size:15.5px;line-height:1.5;cursor:pointer;background:var(--paper);border:2px solid #D9CBB8;border-radius:12px;padding:12px 14px}
+.check input{flex:none;width:22px;height:22px;margin:1px 0 0;accent-color:var(--orange-text)}
+.check:has(input:checked){border-color:var(--teal-strong);background:var(--teal-soft)}
+.err{color:var(--orange-text);font-size:13.5px;font-weight:700;line-height:1.5}
+.err:empty{display:none}
+.err--form{background:#FFF1E8;border-radius:12px;padding:12px 14px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.privacy{font-size:12.5px;color:var(--ink-2);line-height:1.7}
+.entry-submit{width:100%}
+.entry-submit[disabled]{opacity:.6;cursor:wait;transform:none;box-shadow:0 5px 0 var(--ink)}
+.entry-done{display:grid;justify-items:center;gap:12px;text-align:center;padding-block:8px}
+.entry-done:focus{outline:none}
+.entry-done,.entry-form .field{scroll-margin-top:96px}
+.done-mark{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--teal-strong);color:#fff;font-size:34px;font-weight:900}
+.entry-done h3{font-size:clamp(21px,3vw,26px);font-weight:900}
+.done-list{margin:6px 0 0;display:grid;gap:6px;text-align:left;background:var(--cream);border-radius:14px;padding:14px 16px;width:100%}
+.done-list div{display:grid;grid-template-columns:3.5em 1fr;gap:8px;font-size:14.5px}
+.done-list dt{font-weight:900;color:var(--ink-2)}
+.done-list dd{margin:0}
+.done-note{font-size:13.5px;color:var(--ink-2);text-align:left}
+.entry-card .contact{justify-content:center;border-top:2px dashed var(--line);padding-top:16px}
+.fallback{font-size:12.5px;color:var(--ink-2);text-align:center}
+.fallback a{color:var(--teal-strong);font-weight:700}
 .contact{font-size:14px;color:var(--ink-2);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px}
 
 /* ---------- footer ---------- */
@@ -609,6 +663,8 @@ section{scroll-margin-top:72px}
 .site-footer .org{display:grid;gap:4px;line-height:1.7}
 .site-footer .org b{display:inline-block;min-width:3.5em;color:var(--yellow);font-weight:700}
 .site-footer small{display:block;margin-top:18px;color:#B9AFA4}
+.footer-note{margin-top:18px;font-size:12px;line-height:1.7;color:#B9AFA4;max-width:52em}
+.footer-note a{color:#F4EEE6}
 
 /* ---------- mobile fixed cta: an event ticket ---------- */
 .fixed-cta{
@@ -656,7 +712,7 @@ section{scroll-margin-top:72px}
       <a href="#access">アクセス</a>
       <a href="#faq">Q&amp;A</a>
     </nav>
-    <a class="btn btn--sm header-cta" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">申し込む</a>
+    <a class="btn btn--sm header-cta" href="#entry">申し込む</a>
   </div>
 </header>
 
@@ -700,8 +756,8 @@ section{scroll-margin-top:72px}
             </dl>
           </div>
           <div class="hero-cta">
-            <a class="btn btn--lg" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">参加を<wbr>申し込む<span class="arrow" aria-hidden="true">→</span></a>
-            <p class="btn-note">Googleフォームが<wbr>開きます</p>
+            <a class="btn btn--lg" href="#entry">参加を<wbr>申し込む<span class="arrow" aria-hidden="true">→</span></a>
+            <p class="btn-note">ページ下の<wbr>申込フォームへ<wbr>進みます</p>
           </div>
         </div>
       </div>
@@ -968,7 +1024,7 @@ section{scroll-margin-top:72px}
       </div>
       <div class="mid-cta">
         <p class="mid-cta-text"><b>親子で<wbr>「楽しい」を<wbr>体験しませんか？</b><span>参加費無料・<wbr>定員200名<wbr>（先着順）</span></p>
-        <a class="btn btn--lg" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">参加を<wbr>申し込む<span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--lg" href="#entry">参加を<wbr>申し込む<span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -1006,7 +1062,7 @@ section{scroll-margin-top:72px}
           <div class="info-row"><dt>定員</dt><dd>200名<wbr>（先着順）<span class="sub">ダンスに<wbr>参加する<wbr>保護者の<wbr>方も<wbr>人数に<wbr>含みます</span></dd></div>
           <div class="info-row"><dt>参加費</dt><dd><strong>無料</strong></dd></div>
           <div class="info-row"><dt>服装</dt><dd>動きやすい<wbr>格好・<wbr>運動靴<wbr>（屋内用）<span class="sub">※お着替えの<wbr>時間は<wbr>ありませんので<wbr>動きやすい<wbr>格好で<wbr>ご来場ください。</span></dd></div>
-          <div class="info-row"><dt>申込方法</dt><dd>Googleフォームから<wbr>お申し込みください。<span class="sub">申込締切：2026年11月5日<wbr>（木）<wbr>（定員に<wbr>達し次第締め切ります）</span></dd></div>
+          <div class="info-row"><dt>申込方法</dt><dd>この<wbr>ページの<a href="#entry">申込フォーム</a>から<wbr>お申し込みください。<span class="sub">申込締切：2026年11月5日<wbr>（木）<wbr>（定員に<wbr>達し次第締め切ります）</span></dd></div>
           <div class="info-row"><dt>お問い合わせ</dt><dd><a class="mail" href="mailto:2026zaimukisoku@gmail.com?subject=%E3%80%8C%E3%82%AB%E3%83%A9%E3%83%80%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%E3%81%A3%E3%81%A6%20TANO%20C%21%21%E3%80%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">2026zaimukisoku@gmail.com</a></dd></div>
           <div class="info-row"><dt>主催など</dt><dd>主催：<wbr><span class="nw">公益社団法人金沢青年会議所</span><br>共催：公益信託金沢教育基金<wbr><span class="nw">あすなろファンド</span><br>後援：<wbr><span class="nw">金沢市教育委員会</span></dd></div>
         </dl>
@@ -1080,17 +1136,121 @@ section{scroll-margin-top:72px}
     </div>
   </section>
 
-  <!-- ===== CLOSING CTA ===== -->
-  <section class="closing section" aria-labelledby="closing-title">
+  <!-- ===== ENTRY FORM ===== -->
+  <section id="entry" class="closing section" aria-labelledby="entry-title">
     <div class="blob blob--teal" aria-hidden="true"></div>
     <div class="blob blob--orange" aria-hidden="true"></div>
     <div class="wrap">
-      <div class="closing-card">
-        <img src="assets/img/logo-tanoc.webp" alt="" width="1200" height="387" style="width:min(100%,360px)" loading="lazy">
-        <h2 id="closing-title" class="hand">たのしい<wbr>時間を<wbr>一緒に<wbr>つくろう!!</h2>
-        <p class="facts-line"><span class="nw">2026年11月7日（土）</span> <span class="nw">金沢市営中央市民体育館</span><br><span class="nw">参加費無料・先着200名</span></p>
-        <a class="btn btn--lg" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">参加を<wbr>申し込む<span class="arrow" aria-hidden="true">→</span></a>
+      <div class="entry-card">
+        <div class="entry-head">
+          <img src="assets/img/logo-tanoc.webp" alt="" width="1200" height="387" loading="lazy">
+          <p class="hand">たのしい<wbr>時間を<wbr>一緒に<wbr>つくろう!!</p>
+          <h2 id="entry-title">参加申込フォーム</h2>
+          <p class="facts-line"><span class="nw">2026年11月7日（土）</span> <span class="nw">金沢市営中央市民体育館</span><br><span class="nw">参加費無料・先着200名</span> <span class="nw">申込締切 11月5日（木）</span></p>
+        </div>
+
+        <form id="entry-form" class="entry-form" novalidate>
+          <p class="form-note">ご家族単位で<wbr>1回、<wbr>代表の<wbr>保護者の<wbr>方が<wbr>お申し込みください。</p>
+
+          <div class="field">
+            <label for="f-email">メールアドレス<span class="ftag ftag--req">必須</span></label>
+            <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+            <p class="hint">申込内容の<wbr>控えを<wbr>この<wbr>アドレスに<wbr>お送りします。</p>
+            <p class="err" id="e-email" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-parent">代表保護者の<wbr>お名前<wbr>（姓のみでも<wbr>可）<span class="ftag ftag--req">必須</span></label>
+            <input id="f-parent" name="parent" type="text" autocomplete="name" required>
+            <p class="err" id="e-parent" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="field field--child" data-child="1">
+            <legend>参加する<wbr>お子さま1人目<span class="ftag ftag--req">必須</span></legend>
+            <div class="child-row">
+              <label class="sub-label" for="f-child1-name">お名前<wbr>（呼び名でも<wbr>可）</label>
+              <input id="f-child1-name" name="child1_name" type="text" autocomplete="off" required>
+              <label class="sub-label" for="f-child1-grade">学年</label>
+              <select id="f-child1-grade" name="child1_grade" required><option value="">選択してください</option><option>1年生</option><option>2年生</option><option>3年生</option><option>4年生</option><option>5年生</option><option>6年生</option></select>
+            </div>
+            <p class="err" id="e-child1" aria-live="polite"></p>
+          </fieldset>
+          <fieldset class="field field--child" data-child="2" hidden data-optional-child>
+            <legend>参加する<wbr>お子さま2人目<span class="ftag ftag--opt">任意</span></legend>
+            <div class="child-row">
+              <label class="sub-label" for="f-child2-name">お名前<wbr>（呼び名でも<wbr>可）</label>
+              <input id="f-child2-name" name="child2_name" type="text" autocomplete="off">
+              <label class="sub-label" for="f-child2-grade">学年</label>
+              <select id="f-child2-grade" name="child2_grade"><option value="">選択してください</option><option>1年生</option><option>2年生</option><option>3年生</option><option>4年生</option><option>5年生</option><option>6年生</option></select>
+            </div>
+            <p class="err" id="e-child2" aria-live="polite"></p>
+          </fieldset>
+          <fieldset class="field field--child" data-child="3" hidden data-optional-child>
+            <legend>参加する<wbr>お子さま3人目<span class="ftag ftag--opt">任意</span></legend>
+            <div class="child-row">
+              <label class="sub-label" for="f-child3-name">お名前<wbr>（呼び名でも<wbr>可）</label>
+              <input id="f-child3-name" name="child3_name" type="text" autocomplete="off">
+              <label class="sub-label" for="f-child3-grade">学年</label>
+              <select id="f-child3-grade" name="child3_grade"><option value="">選択してください</option><option>1年生</option><option>2年生</option><option>3年生</option><option>4年生</option><option>5年生</option><option>6年生</option></select>
+            </div>
+            <p class="err" id="e-child3" aria-live="polite"></p>
+          </fieldset>
+          <button type="button" class="add-child" id="add-child" hidden>＋ <wbr>お子さまを<wbr>追加する</button>
+
+          <div class="field">
+            <label for="f-total">参加者の<wbr>合計人数<wbr>（保護者を<wbr>含む）<span class="ftag ftag--req">必須</span></label>
+            <div class="total-row"><input id="f-total" name="total" type="number" inputmode="numeric" min="1" max="20" step="1" required><span>名</span></div>
+            <p class="hint">ダンスに<wbr>参加する<wbr>保護者の<wbr>方も<wbr>人数に<wbr>含めてください。<wbr><span class="nw">例：保護者1名＋お子さま2名＝3名</span></p>
+            <p class="err" id="e-total" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-care">参加に<wbr>あたり配慮が<wbr>必要な<wbr>こと<wbr>（持病・<wbr>けが<wbr>など）<span class="ftag ftag--req">必須</span></label>
+            <textarea id="f-care" name="care" rows="3" required placeholder="ない場合は「なし」とご記入ください"></textarea>
+            <button type="button" class="chip-btn" data-fill="f-care" data-value="なし">「なし」と<wbr>入力する</button>
+            <p class="err" id="e-care" aria-live="polite"></p>
+          </div>
+
+          <div class="field field--check">
+            <p class="check-title">写真・<wbr>動画撮影および<wbr>広報掲載等への<wbr>同意<span class="ftag ftag--req">必須</span></p>
+            <p class="check-desc">当日の<wbr>写真・<wbr>動画を、<wbr>主催・<wbr>共催団体の<wbr>公式ウェブサイト、<wbr>SNS、<wbr>活動報告資料等へ<wbr>掲載する<wbr>場合が<wbr>あります。<wbr>また、<wbr>プログラム内で<wbr>リール動画撮影を<wbr>行います。</p>
+            <label class="check"><input id="f-photo" name="photo" type="checkbox" required><span>参加者全員に<wbr>ついて、<wbr>上記の<wbr>撮影・<wbr>掲載に<wbr>同意する</span></label>
+            <p class="err" id="e-photo" aria-live="polite"></p>
+          </div>
+
+          <div class="field field--check">
+            <p class="check-title">参加に<wbr>あたっての<wbr>注意事項<span class="ftag ftag--req">必須</span></p>
+            <p class="check-desc">安全の<wbr>ためスタッフの<wbr>案内に<wbr>従ってください。<wbr>体調が<wbr>すぐれない<wbr>場合は<wbr>参加を<wbr>お控えください。<wbr>貴重品は<wbr>各自で<wbr>管理し、<wbr>欠席・<wbr>変更時は<wbr>事前に<wbr>ご連絡ください。</p>
+            <label class="check"><input id="f-rules" name="rules" type="checkbox" required><span>注意事項を<wbr>確認しました</span></label>
+            <p class="err" id="e-rules" aria-live="polite"></p>
+          </div>
+
+          <div class="field" data-optional-other hidden>
+            <label for="f-other">その<wbr>他の<wbr>連絡事項<span class="ftag ftag--opt">任意</span></label>
+            <textarea id="f-other" name="other" rows="3"></textarea>
+          </div>
+
+          <div class="hp" aria-hidden="true"><label for="f-company">会社名</label><input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+
+          <p class="privacy">入力いただいた<wbr>内容は、<wbr>Googleフォームを<wbr>通じて<wbr>主催者が<wbr>受け取り、<wbr>本イベントの<wbr>運営と<wbr>ご連絡の<wbr>ためにのみ<wbr>使用します。</p>
+          <p class="err err--form" id="e-form" aria-live="polite"></p>
+          <button type="submit" class="btn btn--lg entry-submit" id="entry-submit"><span class="label">この<wbr>内容で<wbr>申し込む</span><span class="arrow" aria-hidden="true">→</span></button>
+        </form>
+
+        <div class="entry-done" id="entry-done" hidden tabindex="-1">
+          <p class="done-mark" aria-hidden="true">✓</p>
+          <h3>お申し込み<wbr>ありがとう<wbr>ございました</h3>
+          <p><span id="done-name"></span>当日<wbr>お会いできるのを<wbr>楽しみに<wbr>しています！</p>
+          <dl class="done-list">
+            <div><dt>日時</dt><dd>2026年11月7日<wbr>（土）<wbr>13:00〜16:45<wbr>（受付 12:15〜）</dd></div>
+            <div><dt>会場</dt><dd>金沢市営中央市民体育館</dd></div>
+            <div><dt>服装</dt><dd>動きやすい<wbr>格好・<wbr>運動靴<wbr>（屋内用）</dd></div>
+          </dl>
+          <p class="done-note">駐車場が<wbr>30台と<wbr>限られている<wbr>ため、<wbr>公共交通機関で<wbr>お越しください。<wbr>申込内容の<wbr>控えの<wbr>メールが<wbr>数分たっても<wbr>届かない<wbr>場合は、<wbr>お手数ですが<wbr>下記まで<wbr>ご連絡ください。</p>
+        </div>
+
         <p class="contact">お問い合わせ：<a class="mail" href="mailto:2026zaimukisoku@gmail.com?subject=%E3%80%8C%E3%82%AB%E3%83%A9%E3%83%80%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%E3%81%A3%E3%81%A6%20TANO%20C%21%21%E3%80%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">2026zaimukisoku@gmail.com</a></p>
+        <p class="fallback">フォームが<wbr>うまく<wbr>送信できない<wbr>場合は、<a href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">Googleフォーム</a>からも<wbr>お申し込みいただけます。</p>
       </div>
     </div>
   </section>
@@ -1104,6 +1264,7 @@ section{scroll-margin-top:72px}
       <span><b>共催</b>公益信託金沢教育基金あすなろファンド</span>
       <span><b>後援</b>金沢市教育委員会</span>
     </p>
+    <p class="footer-note">この<wbr>サイトでは、<wbr>広告の<wbr>効果を<wbr>測る<wbr>ために<wbr>Meta Platforms, Inc.の<wbr>計測ツール<wbr>（Metaピクセル）を<wbr>使用し、<wbr>閲覧や<wbr>申込の<wbr>情報を<wbr>同社に<wbr>送信しています。<wbr>詳しくは<a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Metaの<wbr>プライバシーポリシー</a>を<wbr>ご覧ください。</p>
     <small>© 2026 公益社団法人<wbr>金沢青年会議所</small>
   </div>
 </footer>
@@ -1114,7 +1275,7 @@ section{scroll-margin-top:72px}
     <p class="fc-main">参加費無料<span class="fc-dot" aria-hidden="true">／</span>先着200名</p>
     <p class="fc-sub">締切 11/5<wbr>（木）<b id="fc-count"></b></p>
   </div>
-  <a class="btn fc-btn" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">申し込む<span class="arrow" aria-hidden="true">→</span></a>
+  <a class="btn fc-btn" href="#entry">申し込む<span class="arrow" aria-hidden="true">→</span></a>
 </div>
 
 
@@ -1132,7 +1293,7 @@ section{scroll-margin-top:72px}
 
   // 画面内に別の申込ボタンが見えている間は、下のチケットを隠す
   var bar = document.querySelector('.fixed-cta');
-  var others = [document.querySelector('.hero-cta'), document.querySelector('.closing-card')].filter(Boolean);
+  var others = [document.querySelector('.hero-cta'), document.querySelector('#entry')].filter(Boolean);
   if (bar && others.length) {
     var inView = new Set();
     var watch = new IntersectionObserver(function (entries) {
@@ -1144,7 +1305,7 @@ section{scroll-margin-top:72px}
 
   // スクロールで各ブロックを持ち上げる（最初から見えている分はそのまま）
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var targets = document.querySelectorAll('.sec-head, .benefit, .intro .panel, .timeline, .prog-head, .step, .message-photo, .message-copy, .about .panel, .mid-cta, .safety li, .info-row, .map-frame, .access-info, .faq details, .closing-card');
+  var targets = document.querySelectorAll('.sec-head, .benefit, .intro .panel, .timeline, .prog-head, .step, .message-photo, .message-copy, .about .panel, .mid-cta, .safety li, .info-row, .map-frame, .access-info, .faq details, .entry-card');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { rootMargin: '0px 0px -8% 0px' });
@@ -1154,6 +1315,154 @@ section{scroll-margin-top:72px}
     el.style.transitionDelay = (i % 4) * 70 + 'ms';
     el.classList.add('rv');
     io.observe(el);
+  });
+})();
+</script>
+
+<script>
+// 申込フォーム：入力内容をGoogleフォームに送り、完了画面を表示する
+(function () {
+  var GF = {
+    action: 'https://docs.google.com/forms/d/e/1FAIpQLSd5f5inJdnf2s5F1JNluouE4KAWvM0ofrWYQBkwQVq9NJ7oIA/formResponse',
+    email: 'emailAddress',
+    parent: 'entry.700881196',
+    child1: 'entry.2116797110',
+    child2: 'entry.1723523804',
+    child3: 'entry.451872817',
+    total: 'entry.415999074',
+    care: 'entry.1515668227',
+    photo: 'entry.20232127',
+    rules: 'entry.1296148902',
+    other: ''     // その他の連絡事項（事前入力URLで番号がわかったら入れる）
+  };
+  var PHOTO_VALUE = '参加者全員について、上記の撮影・掲載に同意する';
+  var RULES_VALUE = '注意事項を確認しました';
+
+  // Metaピクセル（IDが入っているときだけ読み込む）
+  var pixelId = (document.querySelector('meta[name="meta-pixel-id"]') || {}).content;
+  if (pixelId) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', pixelId);
+    fbq('track', 'PageView');
+  }
+  function track(name) { try { if (window.fbq) fbq('track', name); } catch (e) {} }
+
+  var form = document.getElementById('entry-form');
+  if (!form) return;
+  function $(id) { return document.getElementById(id); }
+  function val(id) { return $(id).value.trim(); }
+
+  // 番号がわかっている任意項目だけ表示する
+  var optionalChildren = [].slice.call(form.querySelectorAll('[data-optional-child]'))
+    .filter(function (el) { return GF['child' + el.dataset.child]; });
+  var addBtn = $('add-child');
+  if (optionalChildren.length) addBtn.hidden = false;
+  addBtn.addEventListener('click', function () {
+    var next = optionalChildren.filter(function (el) { return el.hidden; })[0];
+    if (next) { next.hidden = false; next.querySelector('input').focus(); }
+    if (!optionalChildren.some(function (el) { return el.hidden; })) addBtn.hidden = true;
+  });
+  if (GF.other) form.querySelector('[data-optional-other]').hidden = false;
+
+  [].forEach.call(form.querySelectorAll('.chip-btn[data-fill]'), function (b) {
+    b.addEventListener('click', function () { var t = $(b.dataset.fill); t.value = b.dataset.value; clear(t); });
+  });
+
+  var started = false;
+  form.addEventListener('input', function (e) {
+    clear(e.target);
+    if (!started) { started = true; track('InitiateCheckout'); }
+  });
+  form.addEventListener('change', function (e) { clear(e.target); });
+
+  function clear(field) {
+    var box = field && field.closest && field.closest('.field');
+    if (!box) return;
+    [].forEach.call(box.querySelectorAll('.is-invalid'), function (f) { f.classList.remove('is-invalid'); f.removeAttribute('aria-invalid'); });
+    var err = box.querySelector('.err'); if (err) err.textContent = '';
+  }
+
+  function validate() {
+    var ok = true, first = null;
+    function fail(errId, field, msg) {
+      var err = $(errId);
+      err.textContent = err.textContent ? err.textContent + ' ' + msg : msg;
+      if (field) { field.classList.add('is-invalid'); field.setAttribute('aria-invalid', 'true'); first = first || field; }
+      ok = false;
+    }
+    [].forEach.call(form.querySelectorAll('.err'), function (e) { e.textContent = ''; });
+    [].forEach.call(form.querySelectorAll('.is-invalid'), function (f) { f.classList.remove('is-invalid'); f.removeAttribute('aria-invalid'); });
+
+    var email = val('f-email');
+    if (!email) fail('e-email', $('f-email'), 'メールアドレスを入力してください。');
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) fail('e-email', $('f-email'), 'メールアドレスの形式をご確認ください（例：name@example.com）。');
+    if (!val('f-parent')) fail('e-parent', $('f-parent'), '代表保護者のお名前を入力してください。');
+    [1, 2, 3].forEach(function (n) {
+      var box = form.querySelector('[data-child="' + n + '"]');
+      if (!box || box.hidden) return;
+      var name = val('f-child' + n + '-name'), grade = val('f-child' + n + '-grade');
+      if (n === 1 || name || grade) {
+        if (!name) fail('e-child' + n, $('f-child' + n + '-name'), 'お名前を入力してください。');
+        if (!grade) fail('e-child' + n, $('f-child' + n + '-grade'), '学年を選んでください。');
+      }
+    });
+    var total = val('f-total');
+    if (!/^\d+$/.test(total) || +total < 1 || +total > 20) fail('e-total', $('f-total'), '参加者の合計人数を数字で入力してください。');
+    if (!val('f-care')) fail('e-care', $('f-care'), 'ない場合は「なし」とご記入ください。');
+    if (!$('f-photo').checked) fail('e-photo', $('f-photo'), '撮影・掲載への同意が必要です。');
+    if (!$('f-rules').checked) fail('e-rules', $('f-rules'), '注意事項をご確認のうえ、チェックを入れてください。');
+    if (!ok && first) { first.focus({ preventScroll: true }); first.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+    return ok;
+  }
+
+  function showDone() {
+    var name = val('f-parent');
+    $('done-name').textContent = name ? name + ' 様、' : '';
+    form.hidden = true;
+    var done = $('entry-done');
+    done.hidden = false;
+    done.focus({ preventScroll: true });
+    done.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    track('Lead');
+  }
+
+  var sending = false;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (sending || !validate()) return;
+    if (val('f-company')) { showDone(); return; }   // 自動投稿（スパム）は送らずに終える
+
+    var body = new URLSearchParams();
+    body.append(GF.email, val('f-email'));
+    body.append(GF.parent, val('f-parent'));
+    [1, 2, 3].forEach(function (n) {
+      var name = val('f-child' + n + '-name');
+      if (GF['child' + n] && name) body.append(GF['child' + n], name + '/' + val('f-child' + n + '-grade'));
+    });
+    body.append(GF.total, val('f-total'));
+    body.append(GF.care, val('f-care'));
+    body.append(GF.photo, PHOTO_VALUE);
+    body.append(GF.rules, RULES_VALUE);
+    if (GF.other && val('f-other')) body.append(GF.other, val('f-other'));
+    body.append('fvv', '1');
+    body.append('pageHistory', '0');
+
+    sending = true;
+    var btn = $('entry-submit'), label = btn.querySelector('.label');
+    btn.disabled = true;
+    label.textContent = '送信しています…';
+    $('e-form').textContent = '';
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 20000);
+    fetch(GF.action, { method: 'POST', mode: 'no-cors', body: body, signal: ctrl ? ctrl.signal : undefined })
+      .then(function () { clearTimeout(timer); showDone(); })
+      .catch(function () {
+        clearTimeout(timer);
+        sending = false;
+        btn.disabled = false;
+        label.textContent = 'この内容で申し込む';
+        $('e-form').textContent = '送信できませんでした。通信状況をご確認のうえ、もう一度お試しください。何度か試してもうまくいかない場合は、下のGoogleフォームからお申し込みください。';
+      });
   });
 })();
 </script>
