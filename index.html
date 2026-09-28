@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>カラダを動かすって TANO C!!</title>
+<meta name="description" content="2026年11月7日（土）金沢市営中央市民体育館で開催。世界で活躍するダンスチームCHIBI UNITYと一緒に、ダンス未経験の子も親子で楽しめるダンス体験会とキャリア教育授業。参加費無料・先着200名。">
+<meta property="og:title" content="カラダを動かすって TANO C!!｜親子参加型ダンスコミュニケーションイベント">
+<meta property="og:description" content="2026年11月7日（土）金沢市営中央市民体育館。CHIBI UNITYと一緒にゼロからはじめるダンス入門。参加費無料・先着200名。">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://nakagome-en.github.io/tanoc2026/">
+<meta property="og:url" content="https://nakagome-en.github.io/tanoc2026/">
+<meta property="og:image" content="https://nakagome-en.github.io/tanoc2026/assets/img/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="カラダを動かすって TANO C!!">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBF6EC">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,700;0,800;1,800&family=Yusei+Magic&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --cream:#FBF6EC;
+  --paper:#FFFFFF;
+  --ink:#262220;
+  --ink-2:#5B544D;
+  --line:#EADFD0;
+  --orange:#EE5A24;
+  --orange-text:#C2410C;
+  --orange-soft:#FDEEDF;
+  --orange-line:#F3CFB0;
+  --teal:#48C0CA;
+  --teal-strong:#13808C;
+  --teal-soft:#E4F5F4;
+  --teal-line:#BCE3E2;
+  --green:#5DB847;
+  --yellow:#FFE31A;
+  --pink:#D3246C;
+  --check:#FFF3A6;
+
+  --f-body:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;
+  --f-display:"Dela Gothic One","Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
+  --f-hand:"Yusei Magic","Zen Kaku Gothic New","Hiragino Maru Gothic ProN",sans-serif;
+  --f-num:"Montserrat","Zen Kaku Gothic New",system-ui,sans-serif;
+
+  --gutter:clamp(16px,4vw,40px);
+  --radius-panel:28px;
+  --radius-card:18px;
+  --shadow:0 2px 0 rgba(38,34,32,.06),0 10px 30px -18px rgba(38,34,32,.35);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:16px;
+  line-height:1.8;
+  font-feature-settings:"palt" 1;
+  line-break:strict;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.35;text-wrap:balance}
+/* Japanese line breaking that works in every browser: tools/add-wbr.py puts <wbr> between phrases,
+   keep-all stops breaks anywhere else, so lines never split a word or leave "す。" alone */
+p,li,dd,summary,figcaption{text-wrap:pretty}
+.nw{white-space:nowrap}
+p{margin:0}
+:focus-visible{outline:3px solid var(--teal-strong);outline-offset:3px;border-radius:6px}
+
+.wrap{width:100%;max-width:1120px;margin-inline:auto;padding-inline:var(--gutter)}
+
+/* ---------- draft notice ---------- */
+.draft{
+  background:var(--ink);color:#fff;font-size:13px;line-height:1.5;
+  padding:8px var(--gutter);text-align:center;
+}
+.draft b{color:var(--yellow)}
+
+/* 要確認 tag: marks placeholder content in this draft */
+.tbd{
+  display:inline-block;vertical-align:.1em;margin-inline:.35em;
+  padding:0 .55em;border-radius:6px;
+  background:var(--check);border:1px dashed #C9A400;color:#6B5600;
+  font-size:12px;font-weight:700;line-height:1.7;letter-spacing:.04em;white-space:nowrap;
+}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb,var(--cream) 88%,transparent);
+  backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
+.site-header .brand img{height:38px;width:auto}
+.site-nav{display:none;gap:22px;margin-left:auto;font-weight:700;font-size:15px}
+.site-nav a{text-decoration:none}
+.site-nav a:hover{color:var(--orange-text)}
+.header-cta{margin-left:auto}
+@media (min-width:880px){
+  .site-nav{display:flex}
+  .header-cta{margin-left:8px}
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  font-family:var(--f-body);font-weight:900;text-decoration:none;
+  border-radius:999px;border:3px solid var(--ink);
+  background:var(--orange);color:#fff;
+  box-shadow:0 5px 0 var(--ink);
+  transition:transform .15s ease,box-shadow .15s ease,background-color .15s;
+}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--ink);background:#E24A15}
+.btn:active{transform:translateY(5px);box-shadow:0 0 0 var(--ink)}
+.btn--sm{font-size:15px;padding:.45em 1.2em;box-shadow:0 3px 0 var(--ink);border-width:2px}
+.btn--sm:hover{box-shadow:0 1px 0 var(--ink)}
+.btn--lg{font-size:clamp(19px,2.2vw,22px);padding:.8em 1.8em;min-height:64px}
+.btn .arrow{
+  display:inline-grid;place-items:center;width:1.5em;height:1.5em;border-radius:50%;
+  background:#fff;color:var(--orange-text);font-size:.8em;line-height:1;
+}
+.btn-note{font-size:13px;color:var(--ink-2);margin-top:12px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;padding-block:28px 48px}
+.blob{position:absolute;z-index:-1;pointer-events:none}
+.blob--teal{background:var(--teal);width:46vw;max-width:520px;aspect-ratio:1;left:-18vw;top:-8%;border-radius:42% 58% 60% 40%/45% 42% 58% 55%}
+.blob--orange{background:var(--orange);width:58vw;max-width:640px;aspect-ratio:1;right:-26vw;top:-14%;border-radius:58% 42% 38% 62%/52% 60% 40% 48%}
+.blob--green{background:var(--green);width:30vw;max-width:340px;aspect-ratio:1;left:-12vw;bottom:-6%;border-radius:60% 40% 52% 48%/40% 56% 44% 60%}
+.blob--dot{border-radius:50%;background:#EF6B8E;width:26px;height:26px;left:52%;top:18px}
+.dots{
+  position:absolute;z-index:-1;left:var(--gutter);top:22px;width:120px;height:150px;
+  background-image:radial-gradient(#fff 2.6px,transparent 3px);background-size:20px 20px;opacity:.9;
+}
+
+.hero-grid{display:grid;gap:18px;align-items:center}
+.hero-copy{display:grid;gap:18px;justify-items:start}
+.eyebrow{
+  font-weight:900;font-size:clamp(14px,1.6vw,17px);letter-spacing:.04em;
+  background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:.2em 1em;
+}
+.hero-logo{width:min(100%,560px);filter:drop-shadow(0 6px 0 rgba(38,34,32,.12))}
+.hero-logo img{width:100%}
+.marker-lines{display:grid;gap:6px;font-weight:900;font-size:clamp(21px,3.2vw,32px);line-height:1.45}
+.marker{
+  background:linear-gradient(transparent 52%,var(--yellow) 52%,var(--yellow) 92%,transparent 92%);
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;padding-inline:.1em;
+}
+
+.key-card{
+  width:100%;max-width:560px;
+  background:var(--paper);border:3px solid var(--ink);border-radius:var(--radius-card);
+  padding:18px 20px 20px;display:grid;gap:12px;box-shadow:0 6px 0 var(--ink);
+}
+.date-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
+.date{font-family:var(--f-num);font-weight:800;line-height:1;display:flex;align-items:flex-end;gap:2px;letter-spacing:-.01em}
+.date .y{font-size:15px;writing-mode:vertical-rl;margin-right:6px;letter-spacing:.08em;align-self:center}
+.date .n{font-size:clamp(46px,7vw,64px)}
+.date .u{font-family:var(--f-body);font-weight:900;font-size:clamp(20px,2.6vw,26px);margin-inline:2px 6px;padding-bottom:.18em}
+.dow{
+  display:inline-grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;
+  background:var(--teal-strong);color:#fff;font-weight:900;font-size:17px;margin-bottom:.35em;
+}
+.time{font-family:var(--f-num);font-weight:800;font-size:clamp(24px,3.2vw,30px);line-height:1.1;border-left:2px dashed var(--line);padding-left:14px}
+.time small{display:block;font-family:var(--f-body);font-weight:700;font-size:14px;margin-top:4px}
+.venue{font-weight:700;font-size:16px;border-top:2px dashed var(--line);padding-top:10px;line-height:1.6}
+.venue span{font-weight:500;font-size:14px;color:var(--ink-2)}
+.specs{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr) minmax(0,1.3fr);margin:0;border:2px solid var(--ink);border-radius:14px;overflow:hidden}
+.spec{display:grid;align-content:start;gap:2px;padding:8px 8px 9px;text-align:center;border-left:2px solid var(--ink)}
+.spec:first-child{border-left:0}
+.spec--free{background:var(--yellow)}
+.spec dt{font-size:12px;font-weight:700;color:var(--ink-2);letter-spacing:.08em}
+.spec dd{margin:0;font-weight:900;font-size:16px;line-height:1.35}
+.spec dd small{display:block;font-size:12px;font-weight:700;color:var(--ink-2)}
+.spec--free dd{font-size:21px;line-height:1.2}
+.hero-cta{display:grid;justify-items:start}
+
+/* photo stage */
+.visual{position:relative;width:100%;max-width:620px;margin-inline:auto}
+.stage{position:relative;width:100%;aspect-ratio:1/1.12}
+.stage .kid{position:absolute;height:auto;filter:drop-shadow(0 8px 10px rgba(38,34,32,.18))}
+.stage .mom{left:0;width:20%;bottom:2%}
+.stage .dad{left:58%;width:19%;bottom:3%}
+.stage .jump{left:29%;width:30%;bottom:33%;z-index:1}
+.stage .white{left:17%;width:42%;bottom:-1%;z-index:2}
+.stage .gray{left:-1%;width:27%;bottom:-1%;z-index:3}
+.stage .stripe{right:-1%;width:25%;bottom:-2%;z-index:4}
+.badge{
+  position:absolute;right:0;top:9%;z-index:6;width:46%;aspect-ratio:1;border-radius:50%;
+  background:
+    radial-gradient(circle closest-side,var(--paper) 0 87%,transparent 87.5%),
+    repeating-conic-gradient(var(--yellow) 0 7.5deg,#E9407A 7.5deg 15deg);
+  display:grid;place-items:start center;text-align:center;
+  box-shadow:0 8px 18px -10px rgba(38,34,32,.45);
+}
+.badge-inner{display:grid;justify-items:center;gap:2px;width:80%;padding-top:31%}
+.badge .team{
+  position:absolute;top:-31%;left:50%;transform:translateX(-50%);width:88%;
+  filter:drop-shadow(0 4px 6px rgba(38,34,32,.2));
+}
+.badge .role{background:var(--yellow);font-weight:900;font-size:clamp(11px,1.3vw,14px);padding:0 .7em;border-radius:6px;line-height:1.7}
+.badge .name{font-family:var(--f-num);font-weight:800;color:var(--pink);font-size:clamp(15px,2.3vw,24px);line-height:1.1;letter-spacing:.01em}
+.badge .ruby{font-size:clamp(8px,1vw,10px);color:var(--pink);font-weight:700;line-height:1.2;margin-top:2px}
+.badge .lead{font-weight:900;color:var(--pink);font-size:clamp(12px,1.5vw,16px);line-height:1.4;margin-top:2px;white-space:nowrap}
+
+.callout{
+  position:absolute;z-index:5;font-family:var(--f-hand);font-size:clamp(13px,1.8vw,17px);line-height:1.35;
+  color:var(--ink);white-space:nowrap;
+}
+.callout--a{left:1%;top:31%;transform:rotate(-12deg)}
+.callout--b{left:6%;top:6%;transform:rotate(-7deg)}
+.callout::after{
+  content:"";position:absolute;left:-10px;top:-6px;width:16px;height:2px;background:var(--ink);transform:rotate(58deg);
+}
+
+/* Motion: one opening sequence (logo pops, marker is drawn, kids jump), then quiet.
+   Everything starts from a visible state; prefers-reduced-motion turns it all off. */
+.marker{background-repeat:no-repeat;background-size:100% 100%}
+@media (prefers-reduced-motion:no-preference){
+  .hero-logo{animation:pop .75s cubic-bezier(.2,1.5,.45,1) both}
+  .marker-lines > span:nth-child(1) .marker{animation:draw .6s .35s cubic-bezier(.3,.7,.3,1) both}
+  .marker-lines > span:nth-child(2) .marker{animation:draw .6s .6s cubic-bezier(.3,.7,.3,1) both}
+  .key-card{animation:rise .6s .25s cubic-bezier(.2,.8,.2,1) both}
+  .badge{animation:tilt-in .7s .9s cubic-bezier(.2,1.4,.4,1) both}
+  .blob--teal,.blob--orange,.blob--green{animation:drift 14s ease-in-out infinite alternate}
+  .blob--orange{animation-duration:17s;animation-delay:-4s}
+  .blob--green{animation-duration:12s;animation-delay:-7s}
+  .hero-cta .btn,.fc-btn{animation:nudge 4.5s 2.4s ease-in-out infinite}
+  @keyframes pop{0%{transform:scale(.9) rotate(-2deg)}100%{transform:none}}
+  @keyframes draw{0%{background-size:0% 100%}100%{background-size:100% 100%}}
+  @keyframes rise{0%{transform:translateY(18px)}100%{transform:none}}
+  @keyframes tilt-in{0%{transform:rotate(-8deg) scale(.94)}100%{transform:none}}
+  @keyframes drift{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(14px,-10px) rotate(8deg)}}
+  @keyframes nudge{0%,84%,100%{transform:translateY(0)}88%{transform:translateY(-5px)}92%{transform:translateY(0)}95%{transform:translateY(-2px)}}
+  /* scroll: blocks lift into place as they arrive (never hidden) */
+  .rv{transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .7s ease}
+  .rv:not(.in){transform:translateY(22px);opacity:.35}
+  .stage .kid{animation:hop 2.4s cubic-bezier(.3,.7,.4,1) 1 both}
+  .stage .jump{animation-delay:.15s}
+  .stage .stripe{animation-delay:.3s}
+  .stage .white{animation-delay:.05s}
+  .stage .gray{animation-delay:.4s}
+  @keyframes hop{0%,40%,100%{transform:translateY(0)}20%{transform:translateY(-14px)}}
+}
+
+@media (min-width:980px){
+  .hero{padding-block:44px 72px}
+  .hero-grid{grid-template-columns:1.02fr .98fr;gap:32px}
+  .hero-copy{grid-row:1;grid-column:1}
+  .visual{grid-row:1;grid-column:2}
+}
+/* phone & tablet: logo & lines, wide photo strip, date card, then the guest card */
+@media (max-width:979px){
+  .hero-grid{grid-template-areas:"top" "stage" "detail" "guest";gap:14px}
+  .hero-copy{display:contents}
+  .hero-top{grid-area:top;display:grid;gap:12px;justify-items:start}
+  .hero-detail{grid-area:detail;display:grid;gap:16px;justify-items:start}
+  .visual{display:contents}
+  .stage{grid-area:stage;aspect-ratio:1/0.72;width:100%;max-width:640px;justify-self:start;margin-top:2px}
+  .stage .mom{left:10%;width:16%;bottom:3%}
+  .stage .gray{left:-2%;width:25%;bottom:-1%}
+  .stage .jump{left:27%;width:27%;bottom:37%}
+  .stage .white{left:15%;width:40%;bottom:-2%}
+  .stage .dad{left:56%;width:17%;bottom:3%}
+  .stage .stripe{right:1%;width:24%;bottom:-2%}
+  .callout--b{left:54%;top:1%;transform:rotate(-6deg)}
+  .callout--a{left:3%;top:24%;transform:rotate(-10deg)}
+  .badge{
+    grid-area:guest;position:relative;top:auto;right:auto;z-index:auto;width:100%;max-width:560px;aspect-ratio:auto;border-radius:22px;
+    display:grid;grid-template-columns:44% 1fr;align-items:center;gap:10px;text-align:left;
+    border:6px solid transparent;padding:10px 14px 10px 8px;box-shadow:none;
+    background:
+      linear-gradient(var(--paper),var(--paper)) padding-box,
+      repeating-linear-gradient(-45deg,var(--yellow) 0 9px,#E9407A 9px 18px) border-box;
+  }
+  .badge .team{position:static;transform:none;width:100%}
+  .badge-inner{width:auto;padding:0;justify-items:start;gap:3px}
+  .badge .role{font-size:12px}
+  .badge .ruby{font-size:10px;margin-top:0}
+  .badge .name{font-size:clamp(19px,5.6vw,24px)}
+  .badge .lead{font-size:clamp(13px,3.8vw,16px)}
+}
+@media (min-width:980px){
+  .hero-top,.hero-detail{display:grid;gap:18px;justify-items:start}
+}
+@media (max-width:599px){
+  .hero{padding-block:14px 36px}
+  .hero-top{gap:10px}
+  .eyebrow{font-size:12.5px;padding:.15em .9em}
+  .marker-lines{font-size:clamp(18px,5.6vw,22px);gap:2px}
+  .callout{font-size:12.5px}
+  .key-card{padding:14px 16px 16px;gap:10px;box-shadow:0 5px 0 var(--ink)}
+  .date .n{font-size:clamp(34px,10vw,46px)}
+  .date .u{font-size:clamp(16px,4.6vw,20px)}
+  .date .y{font-size:12px;margin-right:4px}
+  .dow{font-size:15px}
+  .time{font-size:clamp(17px,4.8vw,22px);padding-left:12px}
+  .time small{font-size:12.5px}
+  .spec dd{font-size:15px}
+  .spec--free dd{font-size:19px}
+  .hero-cta{justify-self:stretch;justify-items:center;text-align:center}
+  .hero-cta .btn{width:100%}
+  .mid-cta{flex-direction:column;justify-content:center;text-align:center}
+  .mid-cta-text{justify-items:center}
+  .links{justify-content:center}
+  .access-panel .link-pill{justify-self:center}
+}
+
+/* ---------- section scaffolding ---------- */
+section{scroll-margin-top:72px}
+.section{padding-block:clamp(56px,8vw,96px)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin-bottom:clamp(24px,4vw,40px)}
+.sec-head .en{font-family:var(--f-display);font-size:clamp(40px,7vw,68px);line-height:1;letter-spacing:.01em;font-weight:400}
+.sec-head .ja{font-family:var(--f-hand);font-size:clamp(17px,2vw,21px)}
+.panel{background:var(--paper);border-radius:var(--radius-panel);padding:clamp(20px,4vw,44px);box-shadow:var(--shadow)}
+
+/* ---------- intro ---------- */
+.intro{padding-block:8px 0}
+.intro .panel{display:grid;gap:20px;align-items:center}
+.intro-hand{font-family:var(--f-hand);color:var(--teal-strong);font-size:clamp(22px,3.4vw,34px);line-height:1.4}
+.intro-body{font-size:17px;max-width:40em}
+.bubbles{display:grid;grid-template-columns:repeat(3,minmax(0,108px));gap:10px}
+.bubble{
+  width:100%;aspect-ratio:9/8;display:grid;place-items:center;text-align:center;
+  font-family:var(--f-hand);font-size:clamp(14px,4vw,17px);line-height:1.3;color:#fff;background:var(--teal-strong);
+  border-radius:52% 48% 46% 54%/55% 52% 48% 45%;
+}
+.bubble:nth-child(2){border-radius:46% 54% 55% 45%/50% 45% 55% 50%}
+.bubble:nth-child(3){border-radius:55% 45% 48% 52%/45% 55% 45% 55%}
+@media (min-width:860px){
+  .intro .panel{grid-template-columns:1fr auto}
+}
+
+/* ---------- message ---------- */
+/* No panel here: type sits on the page ground, the photo is the only framed object. */
+.message{
+  display:grid;gap:18px;
+  grid-template-areas:"theme" "title" "photo" "copy";
+}
+.message-theme{grid-area:theme;display:grid;gap:6px;justify-items:start}
+.theme-label{background:var(--yellow);color:var(--ink);font-weight:900;font-size:12px;letter-spacing:.12em;padding:.1em .8em;border-radius:999px}
+.theme-en{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,4.4vw,46px);line-height:1.1;display:flex;flex-wrap:wrap;gap:0 .3em}
+.theme-en span{white-space:nowrap}
+.theme-en span:first-child{color:var(--orange-text)}
+.theme-en span:last-child{color:var(--teal-strong)}
+.theme-ja{font-family:var(--f-hand);font-size:clamp(15px,1.7vw,18px);color:var(--ink-2)}
+.message-title{grid-area:title;font-size:clamp(23px,3vw,32px);font-weight:900;line-height:1.5;margin-top:6px}
+.message-photo{grid-area:photo;position:relative;margin:4px 0 0;width:100%;aspect-ratio:4/3;border-radius:22px;overflow:hidden}
+.message-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.message-photo figcaption{
+  position:absolute;top:10px;right:10px;font-size:11px;font-weight:700;color:#fff;line-height:1.6;
+  background:rgba(38,34,32,.6);border-radius:999px;padding:0 .7em;
+}
+.message-copy{grid-area:copy;display:grid;gap:14px}
+.message-copy p{font-size:16.5px;line-height:1.95;max-width:36em}
+@media (min-width:900px){
+  .message{
+    grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);column-gap:clamp(40px,5vw,72px);row-gap:16px;
+    grid-template-areas:"photo theme" "photo title" "photo copy";grid-template-rows:auto auto 1fr;align-items:start;
+  }
+  .message-photo{aspect-ratio:1;margin:0}
+  .message-title{margin-top:10px}
+}
+
+/* ---------- benefit ---------- */
+.benefits{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+@media (min-width:760px){.benefits{grid-template-columns:1fr 1fr;gap:20px}}
+.benefit{
+  background:var(--paper);border-radius:var(--radius-card);box-shadow:var(--shadow);
+  padding:clamp(18px,2.6vw,26px);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+}
+.bf-key{
+  width:88px;height:78px;display:grid;place-items:center;text-align:center;color:#fff;
+  font-family:var(--f-hand);font-size:19px;line-height:1.2;
+  border-radius:52% 48% 46% 54%/55% 52% 48% 45%;
+}
+.benefit--orange .bf-key{background:var(--orange-text)}
+.benefit--teal .bf-key{background:var(--teal-strong);border-radius:46% 54% 55% 45%/50% 45% 55% 50%}
+.benefit--pink .bf-key{background:var(--pink);border-radius:55% 45% 48% 52%/45% 55% 45% 55%}
+.benefit--green .bf-key{background:#3B8A2A;border-radius:48% 52% 56% 44%/52% 46% 54% 48%}
+.bf-body{display:grid;gap:8px}
+.bf-body h3{font-size:clamp(18px,2vw,20px);font-weight:900}
+.bf-body p{font-size:15px;line-height:1.8}
+.bf-from{
+  justify-self:start;display:inline-flex;align-items:center;gap:.4em;font-size:13px;font-weight:700;text-decoration:none;
+  border-radius:999px;padding:.1em .8em;background:var(--cream);color:var(--ink-2);
+}
+.bf-from:hover{background:var(--check);color:var(--ink)}
+@media (max-width:420px){
+  .benefit{grid-template-columns:1fr}
+  .bf-key{width:auto;height:auto;padding:.3em 1em;border-radius:999px!important;justify-self:start;font-size:17px}
+}
+
+/* ---------- mid cta ---------- */
+.mid-cta{
+  margin-top:clamp(24px,4vw,36px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;
+  background:var(--yellow);border:3px solid var(--ink);border-radius:var(--radius-card);padding:20px clamp(18px,3vw,32px);
+}
+.mid-cta-text{display:grid;gap:2px}
+.mid-cta-text b{font-size:clamp(18px,2.2vw,22px);font-weight:900;line-height:1.45}
+.mid-cta-text span{font-size:14px;font-weight:700}
+@media (max-width:599px){.mid-cta .btn{width:100%}}
+
+/* ---------- timeline ---------- */
+.tagline{font-family:var(--f-hand);font-size:clamp(17px,2.2vw,22px);margin-bottom:20px}
+.timeline{
+  list-style:none;margin:0 0 clamp(28px,4vw,44px);padding:0;
+  display:grid;gap:0;border-radius:var(--radius-card);overflow:hidden;border:2px solid var(--ink);background:var(--paper);
+}
+.timeline li{display:grid;grid-template-columns:5.4em 1fr;align-items:center;gap:12px;padding:12px 18px;border-top:2px dashed var(--line)}
+.timeline li:first-child{border-top:0}
+.timeline .t{font-family:var(--f-num);font-weight:800;font-size:19px;font-variant-numeric:tabular-nums}
+.timeline .what{font-weight:700;min-width:0}
+.timeline .p1{background:var(--orange-soft)}
+.timeline .p2{background:var(--teal-soft)}
+.timeline .tag{display:inline-block;font-size:13px;font-weight:900;color:#fff;border-radius:999px;padding:0 .8em;margin-right:.5em;line-height:1.8}
+.timeline .p1 .tag{background:var(--orange-text)}
+.timeline .p2 .tag{background:var(--teal-strong)}
+@media (min-width:860px){
+  .timeline{grid-template-columns:.8fr 2fr 2fr .8fr}
+  .timeline li{grid-template-columns:1fr;border-top:0;border-left:2px dashed var(--line);padding:16px 18px;align-content:start;gap:4px}
+  .timeline li:first-child{border-left:0}
+  .timeline .t{font-size:21px}
+}
+
+/* ---------- program panels ---------- */
+.programs{display:grid;gap:24px}
+@media (min-width:900px){.programs{grid-template-columns:1fr 1fr;align-items:start}}
+.prog{border-radius:var(--radius-panel);border:2px solid;overflow:hidden;background:var(--paper)}
+.prog--1{border-color:var(--orange-line)}
+.prog--2{border-color:var(--teal-line)}
+.prog-head{padding:22px clamp(18px,3vw,28px) 20px;display:grid;gap:10px}
+.prog--1 .prog-head{background:var(--orange-soft)}
+.prog--2 .prog-head{background:var(--teal-soft)}
+.prog-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.prog-no{
+  display:inline-flex;align-items:center;gap:.4em;color:#fff;font-weight:900;font-size:16px;
+  padding:.15em .95em .15em .8em;border-radius:999px;
+}
+.prog-no i{font-style:normal;display:inline-grid;place-items:center;width:1.5em;height:1.5em;border-radius:50%;background:#fff;font-family:var(--f-num);font-weight:800;font-size:.9em}
+.prog--1 .prog-no{background:var(--orange-text)}
+.prog--1 .prog-no i{color:var(--orange-text)}
+.prog--2 .prog-no{background:var(--teal-strong)}
+.prog--2 .prog-no i{color:var(--teal-strong)}
+.prog-time{font-family:var(--f-num);font-weight:800;font-size:22px;font-variant-numeric:tabular-nums}
+.prog--1 .prog-time{color:var(--orange-text)}
+.prog--2 .prog-time{color:var(--teal-strong)}
+.prog-dur{margin-left:auto;background:var(--paper);border-radius:8px;padding:.1em .7em;font-size:14px;font-weight:700}
+.prog-title{font-size:clamp(22px,2.6vw,27px);font-weight:900}
+.prog-lead{font-size:15px;color:var(--ink-2)}
+
+.steps{list-style:none;margin:0;padding:clamp(16px,2.6vw,24px);display:grid;gap:14px}
+.step{
+  display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:center;
+  border:2px solid var(--line);border-radius:var(--radius-card);padding:16px;background:var(--paper);
+}
+.prog--1 .step{border-color:var(--orange-line)}
+.prog--2 .step{border-color:var(--teal-line)}
+.step-no{
+  grid-row:span 2;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--f-num);font-weight:800;font-size:20px;color:#fff;
+}
+.prog--1 .step-no{background:var(--orange)}
+.prog--2 .step-no{background:var(--teal)}
+.step h4{font-size:clamp(16px,4.6vw,18px);font-weight:900;line-height:1.4}
+.step h4 small{display:inline-block;margin-left:8px;font-size:13px;font-weight:700;white-space:nowrap}
+.prog--1 .step h4 small{color:var(--orange-text)}
+.prog--2 .step h4 small{color:var(--teal-strong)}
+.step-body{display:grid;gap:12px;grid-column:1 / -1}
+.step-no{grid-row:auto}
+.step-body p{font-size:15px;line-height:1.75}
+.step-body img{border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%;max-width:260px}
+.step .hand{font-family:var(--f-hand);font-size:15px;line-height:1.4}
+.prog--1 .step .hand{color:var(--orange-text)}
+.prog--2 .step .hand{color:var(--teal-strong)}
+@media (min-width:560px){
+  .step-no{grid-row:span 2}
+  .step-body{grid-column:2;grid-template-columns:1fr 150px;align-items:start}
+  .step-body img{max-width:none}
+  .step-body.no-photo{grid-template-columns:1fr}
+}
+
+/* ---------- CHIBI UNITY ---------- */
+.about{position:relative;isolation:isolate}
+.about .panel{display:grid;gap:clamp(20px,3vw,36px);align-items:center}
+@media (min-width:900px){.about .panel{grid-template-columns:1fr 1.05fr}}
+.about-photo{border-radius:20px;overflow:hidden;aspect-ratio:796/549}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about-name{display:grid;gap:4px}
+.about-name .kana{font-size:13px;font-weight:700;letter-spacing:.3em;color:var(--pink)}
+.about-name h3{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,4.6vw,46px);line-height:1.15}
+.about .panel > *{min-width:0}
+.about-lead{font-weight:900;font-size:clamp(18px,2.2vw,21px);margin-top:10px}
+.about-text{margin-top:10px;font-size:15.5px;max-width:36em}
+.facts{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+@media (min-width:480px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.facts li{border:2px solid var(--line);border-radius:14px;padding:10px 14px;display:grid;gap:2px;align-content:start}
+.facts .k{font-size:12px;font-weight:700;color:var(--ink-2);letter-spacing:.04em}
+.facts .v{font-weight:900;font-size:16px;line-height:1.45}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.link-pill{
+  display:inline-flex;align-items:center;gap:.4em;text-decoration:none;font-weight:700;font-size:15px;
+  border:2px solid var(--ink);border-radius:999px;padding:.3em 1.1em;background:var(--paper);
+}
+.link-pill:hover{background:var(--yellow)}
+
+/* ---------- parents & safety ---------- */
+.two-col{display:grid;gap:24px}
+@media (min-width:900px){.two-col{grid-template-columns:1fr 1fr}}
+.box-title{
+  display:inline-block;font-weight:900;font-size:18px;padding:.25em 1.2em;border-radius:999px;margin-bottom:16px;
+}
+.box-title--teal{background:var(--teal);color:var(--ink)}
+.box-title--orange{border:2px solid var(--orange-text);color:var(--orange-text);background:var(--paper)}
+.safety{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+.safety li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;font-size:15px;line-height:1.7}
+.safety .ico{
+  width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--teal-soft);color:var(--teal-strong);
+  font-family:var(--f-num);font-weight:800;font-size:14px;
+}
+.safety b{display:block;font-size:16px}
+@media (min-width:760px){.safety--grid{grid-template-columns:1fr 1fr;gap:20px 32px;margin-top:0}}
+.note{margin-top:18px;border-radius:14px;background:var(--cream);padding:14px 16px;font-size:14.5px;line-height:1.75}
+.note b{display:block;font-size:15px;margin-bottom:2px}
+
+/* ---------- info table ---------- */
+.info{display:grid;gap:0;margin:0}
+.info-row{display:grid;gap:4px 24px;padding:16px 0;border-top:2px dashed var(--line)}
+.info-row:first-child{border-top:0;padding-top:0}
+.info dt{font-weight:900;font-size:14px;letter-spacing:.08em;color:var(--ink-2)}
+.info dd{margin:0;font-size:16px;font-weight:500;line-height:1.7}
+.info dd strong{font-weight:900}
+.info dd .sub{display:block;font-size:13.5px;color:var(--ink-2)}
+@media (min-width:700px){
+  .info-row{grid-template-columns:7.5em 1fr}
+  .info dt{padding-top:2px}
+}
+.mail{
+  font-family:var(--f-num);font-weight:700;font-size:16px;color:var(--teal-strong);
+  text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;word-break:break-all;
+}
+.mail:hover{color:var(--ink)}
+
+/* ---------- access ---------- */
+.access-grid{display:grid;gap:20px}
+@media (min-width:900px){.access-grid{grid-template-columns:1.15fr 1fr;align-items:stretch}}
+.map-frame{border-radius:var(--radius-card);overflow:hidden;border:2px solid var(--line);background:var(--paper);aspect-ratio:4/3}
+@media (min-width:900px){.map-frame{aspect-ratio:auto;min-height:380px}}
+.map-frame iframe{display:block;width:100%;height:100%;border:0}
+.map-placeholder{height:100%;min-height:240px;display:grid;place-items:center;text-align:center;padding:16px;color:var(--ink-2);font-size:14px;line-height:1.7}
+.access-info{display:grid;gap:16px;align-content:start}
+.access-panel{display:grid;gap:14px;justify-items:start}
+.route{display:grid;gap:4px;border-top:2px dashed var(--line);padding-top:12px;width:100%}
+.route-label{font-weight:900;font-size:14px;color:var(--teal-strong)}
+.route p:last-child{font-size:15px;line-height:1.8}
+.addr{font-size:18px;font-weight:900;line-height:1.6}
+.addr span{display:block;font-size:15px;font-weight:500;color:var(--ink-2)}
+.warn{
+  border:3px solid var(--orange-text);border-radius:var(--radius-card);background:var(--paper);padding:18px 20px;
+}
+.warn h3{color:var(--orange-text);font-size:18px;font-weight:900;margin-bottom:8px}
+.warn p{font-size:15px}
+.warn em{font-style:normal;font-weight:900;background:linear-gradient(transparent 60%,var(--check) 60%)}
+.parking{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;margin:6px 0 10px}
+.parking .num{font-family:var(--f-num);font-weight:800;font-size:44px;line-height:1;color:var(--orange-text)}
+.parking .lbl{font-weight:700}
+
+/* ---------- faq ---------- */
+.faq{display:grid;gap:12px}
+.faq details{background:var(--paper);border-radius:var(--radius-card);border:2px solid var(--line)}
+.faq summary{
+  list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
+  padding:16px 18px;font-weight:900;font-size:16px;line-height:1.5;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq .q{font-family:var(--f-num);font-weight:800;color:var(--orange-text);font-size:20px}
+.faq .plus{width:26px;height:26px;border-radius:50%;background:var(--cream);display:grid;place-items:center;font-weight:900;transition:transform .2s}
+.faq details[open] .plus{transform:rotate(45deg)}
+.faq .a{padding:0 18px 18px 50px;font-size:15px;line-height:1.8}
+
+/* ---------- closing cta ---------- */
+.closing{position:relative;isolation:isolate;overflow:hidden;text-align:center}
+.closing .blob--orange{top:auto;bottom:-40%;right:-18vw}
+.closing .blob--teal{top:auto;bottom:-30%;left:-16vw}
+.closing-card{
+  background:var(--paper);border:3px solid var(--ink);border-radius:var(--radius-panel);
+  padding:clamp(28px,5vw,52px) clamp(18px,4vw,48px);display:grid;justify-items:center;gap:16px;max-width:760px;margin-inline:auto;
+  box-shadow:0 8px 0 var(--ink);
+}
+.closing-card .hand{font-family:var(--f-hand);font-size:clamp(20px,3vw,28px);line-height:1.4}
+.closing-card .facts-line{font-weight:700;font-size:15px;color:var(--ink-2)}
+.contact{font-size:14px;color:var(--ink-2);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px}
+
+/* ---------- footer ---------- */
+.site-footer{background:var(--ink);color:#F4EEE6;padding-block:36px calc(112px + env(safe-area-inset-bottom,0px));font-size:14px}
+@media (min-width:880px){.site-footer{padding-bottom:40px}}
+.site-footer .org{display:grid;gap:4px;line-height:1.7}
+.site-footer .org b{display:inline-block;min-width:3.5em;color:var(--yellow);font-weight:700}
+.site-footer small{display:block;margin-top:18px;color:#B9AFA4}
+
+/* ---------- mobile fixed cta: an event ticket ---------- */
+.fixed-cta{
+  position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:50;
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;
+  padding:7px 8px 7px 7px;background:var(--paper);border:3px solid var(--ink);border-radius:18px;
+  box-shadow:0 5px 0 var(--ink);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.fixed-cta.is-away{transform:translateY(calc(100% + 24px + env(safe-area-inset-bottom,0px)))}
+.fc-stub{
+  display:grid;place-items:center;align-content:center;gap:3px;width:50px;align-self:stretch;
+  background:var(--yellow);border-radius:11px;line-height:1;
+}
+.fc-stub b{font-family:var(--f-num);font-weight:800;font-size:18px;letter-spacing:-.02em}
+.fc-stub span{font-size:11px;font-weight:900;color:#fff;background:var(--teal-strong);border-radius:999px;padding:.15em .55em}
+.fc-info{border-left:2px dashed var(--line);padding-left:10px;display:grid;gap:1px}
+.fc-main{font-size:13px;font-weight:900;line-height:1.35;white-space:nowrap}
+.fc-dot{color:var(--line);margin-inline:1px}
+.fc-sub{font-size:11px;font-weight:700;color:var(--ink-2);line-height:1.4;white-space:nowrap}
+.fc-sub b{color:var(--orange-text);font-weight:900;margin-left:4px}
+.fc-btn{font-size:15px;padding:.6em .7em .6em 1em;border-width:2px;box-shadow:0 3px 0 var(--ink);white-space:nowrap;gap:.4em}
+.fc-btn:hover{box-shadow:0 1px 0 var(--ink)}
+@media (max-width:370px){.fc-btn .arrow{display:none}.fc-btn{padding-inline:.9em}}
+@media (max-width:330px){.fc-stub{display:none}.fixed-cta{grid-template-columns:minmax(0,1fr) auto}.fc-info{border-left:0;padding-left:4px}}
+@media (min-width:880px){.fixed-cta{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="ページの先頭へ"><img src="assets/img/logo-tanoc.webp" alt="カラダを動かすって TANO C!!" width="1200" height="387"></a>
+    <nav class="site-nav" aria-label="ページ内リンク">
+      <a href="#message">想い</a>
+      <a href="#program">プログラム</a>
+      <a href="#chibi-unity">講師</a>
+      <a href="#outline">開催概要</a>
+      <a href="#access">アクセス</a>
+      <a href="#faq">Q&amp;A</a>
+    </nav>
+    <a class="btn btn--sm header-cta" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">申し込む</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="blob blob--teal" aria-hidden="true"></div>
+    <div class="blob blob--orange" aria-hidden="true"></div>
+    <div class="blob blob--green" aria-hidden="true"></div>
+    <div class="blob blob--dot" aria-hidden="true"></div>
+    <div class="dots" aria-hidden="true"></div>
+
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="hero-top">
+          <p class="eyebrow">親子参加型<wbr>ダンスコミュニケーションイベント</p>
+          <h1 id="hero-title" class="hero-logo"><img src="assets/img/logo-tanoc.webp" alt="カラダを動かすって TANO C!!" width="1200" height="387"></h1>
+          <p class="marker-lines">
+            <span><span class="marker">ダンス未経験の<wbr>子が<wbr>主役！</span></span>
+            <span><span class="marker">ゼロから<wbr>はじめる<wbr>ダンス入門！</span></span>
+          </p>
+        </div>
+
+        <div class="hero-detail">
+          <div class="key-card">
+            <div class="date-row">
+              <p class="date" aria-label="2026年11月7日 土曜日">
+                <span class="y" aria-hidden="true">2026</span>
+                <span class="n" aria-hidden="true">11</span><span class="u" aria-hidden="true">月</span>
+                <span class="n" aria-hidden="true">7</span><span class="u" aria-hidden="true">日</span>
+                <span class="dow" aria-hidden="true">土</span>
+              </p>
+              <p class="time">13:00–16:45<small>受付開始 12:15</small></p>
+            </div>
+            <p class="venue">金沢市営中央市民体育館<br><span>金沢市長町3丁目3-3</span></p>
+            <dl class="specs">
+              <div class="spec spec--free"><dt>参加費</dt><dd>無料</dd></div>
+              <div class="spec"><dt>定員</dt><dd>200名<small>先着順</small></dd></div>
+              <div class="spec"><dt>対象</dt><dd>金沢市内の<wbr>小学生</dd></div>
+            </dl>
+          </div>
+          <div class="hero-cta">
+            <a class="btn btn--lg" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">参加を<wbr>申し込む<span class="arrow" aria-hidden="true">→</span></a>
+            <p class="btn-note">Googleフォームが<wbr>開きます</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual">
+      <div class="stage" role="img" aria-label="笑顔でジャンプする子どもたちと、手拍子をする保護者">
+        <p class="callout callout--b" aria-hidden="true">カラダを<wbr>動か<wbr>すって<br>たのしい!!</p>
+        <p class="callout callout--a" aria-hidden="true">みんなが<wbr>いるから<br>たのしい!!</p>
+        <img class="kid mom" src="assets/img/mom.webp" alt="" width="424" height="900">
+        <img class="kid dad" src="assets/img/dad.webp" alt="" width="439" height="900">
+        <img class="kid jump" src="assets/img/girl-jump.webp" alt="" width="693" height="1000">
+        <img class="kid white" src="assets/img/girl-white.webp" alt="" width="886" height="1100">
+        <img class="kid gray" src="assets/img/boy-gray.webp" alt="" width="592" height="900">
+        <img class="kid stripe" src="assets/img/boy-stripe.webp" alt="" width="418" height="1100">
+      </div>
+      <div class="badge">
+        <img class="team" src="assets/img/chibi-cutout.webp" alt="CHIBI&nbsp;UNITYのメンバー" width="666" height="418">
+        <div class="badge-inner">
+          <span class="role">特別講師</span>
+          <span class="ruby">チビユニティ</span>
+          <span class="name">CHIBI&nbsp;UNITY</span>
+          <span class="lead">15名が<wbr>参加して<br>しっかり<wbr>サポート！</span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MESSAGE ===== -->
+  <section id="message" class="section" aria-labelledby="message-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="en" aria-hidden="true">MESSAGE</p>
+        <p class="ja">この<wbr>イベントに<wbr>込めた<wbr>想い</p>
+      </div>
+      <div class="message">
+        <div class="message-theme">
+          <span class="theme-label">テーマ</span>
+          <p class="theme-en" lang="en"><span>Be You.</span> <span>Enjoy it.</span></p>
+          <p class="theme-ja">自分らしく、<wbr>思いきり楽しもう。</p>
+        </div>
+        <h2 id="message-title" class="message-title">上手に<wbr>踊る<wbr>前に、<br><span class="marker">「楽しい」に<wbr>出会って<wbr>ほしい。</span></h2>
+        <figure class="message-photo">
+          <img src="assets/img/msg-parent-child.jpg" alt="手をつないで笑顔で踊る母親と娘" width="900" height="900" loading="lazy">
+          <figcaption>※写真は<wbr>イメージです</figcaption>
+        </figure>
+        <div class="message-copy">
+          <p>中学校で<wbr>ダンスが<wbr>必修と<wbr>なった<wbr>今、<wbr>ダンスに<wbr>苦手意識を<wbr>も<wbr>つ<wbr>子ども<wbr>たちも<wbr>少なく<wbr>ありません。<wbr>「リズムに<wbr>合わせられない」<wbr>「人前で<wbr>踊るのは<wbr>は<wbr>ずかしい」。<wbr>そう<wbr>感じたまま、<wbr>授業で<wbr>ダンスに<wbr>向き合っている<wbr>子も<wbr>います。</p>
+          <p>この<wbr>イベントは、<wbr>ダンスを<wbr>習う<wbr>前に<wbr>「楽しむ」<wbr>体験を<wbr>通して、<wbr>身体を<wbr>動かす<wbr>ことの<wbr>楽しさに<wbr>出会って<wbr>ほしいと<wbr>いう<wbr>想いで<wbr>企画しました。<wbr>上手か<wbr>どうかは<wbr>関係ありません。<wbr>音楽に<wbr>合わせて身体を<wbr>動かし、<wbr>友達や<wbr>家族と笑い合う。<wbr>その<wbr>経験が、<wbr>新しい<wbr>ことに<wbr>挑戦する<wbr>自信に<wbr>つながると<wbr>考えています。</p>
+          <p>すべての<wbr>子どもに<wbr>運動の<wbr>機会を<wbr>つくり、<wbr>自分から<wbr>挑戦する<wbr>心を<wbr>育てる<wbr>こと。<wbr>それが、<wbr>この<wbr>1日で<wbr>目指す<wbr>ことです。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFIT ===== -->
+  <section id="benefit" class="section" style="padding-top:0" aria-labelledby="benefit-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="en" aria-hidden="true">BENEFIT</p>
+        <h2 id="benefit-title" class="ja">この<wbr>イベントで<wbr>得られる<wbr>こと</h2>
+      </div>
+      <ul class="benefits">
+        <li class="benefit benefit--orange">
+          <span class="bf-key" aria-hidden="true">楽しい</span>
+          <div class="bf-body">
+            <h3>身体を<wbr>動かす<wbr>「楽しい」</h3>
+            <p>音楽に<wbr>合わせて身体を<wbr>動かす気持ちよさを、<wbr>ダンス未経験の<wbr>子も<wbr>ゼロから<wbr>体験します。<wbr>運動を<wbr>好きに<wbr>なる<wbr>最初の<wbr>一歩に<wbr>なります。</p>
+            <a class="bf-from" href="#program"><span aria-hidden="true">▶</span>企画1 交流ダンス体験会</a>
+          </div>
+        </li>
+        <li class="benefit benefit--teal">
+          <span class="bf-key" aria-hidden="true">挑戦</span>
+          <div class="bf-body">
+            <h3>夢に<wbr>向かって<wbr>挑戦する<wbr>心</h3>
+            <p>世界の<wbr>舞台に<wbr>挑んできた<wbr>CHIBI&nbsp;UNITYから、<wbr>成功も<wbr>失敗も<wbr>含めた<wbr>リアルな<wbr>経験談を<wbr>直接<wbr>聞きます。<wbr>最後は<wbr>「20歳の<wbr>自分へ」<wbr>手紙を<wbr>書き、<wbr>将来を<wbr>自分の<wbr>言葉で<wbr>考えます。</p>
+            <a class="bf-from" href="#program"><span aria-hidden="true">▶</span>企画2 キャリア教育授業</a>
+          </div>
+        </li>
+        <li class="benefit benefit--pink">
+          <span class="bf-key" aria-hidden="true">表現</span>
+          <div class="bf-body">
+            <h3>自分を<wbr>表現する<wbr>楽しさと<wbr>達成感</h3>
+            <p>プロの<wbr>ダンサーと<wbr>一緒に<wbr>ダンス動画<wbr>（リール）を<wbr>撮影します。<wbr>仲間と<wbr>ひとつの<wbr>作品を<wbr>仕上げる<wbr>経験が、<wbr>次の<wbr>挑戦への<wbr>自信に<wbr>なります。</p>
+            <a class="bf-from" href="#program"><span aria-hidden="true">▶</span>企画2 リール撮影企画</a>
+          </div>
+        </li>
+        <li class="benefit benefit--green">
+          <span class="bf-key" aria-hidden="true">つながり</span>
+          <div class="bf-body">
+            <h3>親子と<wbr>仲間の<wbr>つながり</h3>
+            <p>親子で<wbr>同じ<wbr>振り付けを<wbr>覚え、<wbr>円に<wbr>なって<wbr>一緒に<wbr>踊ります。<wbr>地域の<wbr>友達との<wbr>出会いと、<wbr>家族の<wbr>特別な<wbr>思い出が<wbr>生まれます。</p>
+            <a class="bf-from" href="#program"><span aria-hidden="true">▶</span>企画1 交流ダンス・<wbr>コミュニケーション</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="intro" aria-labelledby="intro-title">
+    <div class="wrap">
+      <div class="panel">
+        <div style="display:grid;gap:14px">
+          <h2 id="intro-title" class="intro-hand">ダンスが<wbr>はじめて<wbr>でも、<wbr>苦手でも<wbr>大丈夫！！</h2>
+          <p class="intro-body">大切なのは、<wbr>上手に<wbr>踊る<wbr>ことではなく、<wbr>音楽に<wbr>合わせて身体を<wbr>動かしてみる<wbr>こと。<wbr>CHIBI&nbsp;UNITYの<wbr>メンバーと<wbr>一緒に<wbr>「身体を<wbr>動か<wbr>すって<wbr>楽しい！」を<wbr>体験する<wbr>1日です。</p>
+        </div>
+        <ul class="bubbles" aria-label="参加のポイント" style="list-style:none;margin:0;padding:0">
+          <li class="bubble">友達と<br>いっしょに！</li>
+          <li class="bubble">親子で<br>参加OK！</li>
+          <li class="bubble">初心者<br>大歓迎！</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAM ===== -->
+  <section id="program" class="section" aria-labelledby="program-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="program-title" class="en">PROGRAM</h2>
+        <p class="ja">当日の<wbr>プログラム</p>
+      </div>
+      <p class="tagline">踊って、<wbr>学んで、<wbr>つながって。<wbr>たのしい<wbr>時間を<wbr>一緒に<wbr>つくろう!!</p>
+
+      <ol class="timeline" aria-label="タイムスケジュール">
+        <li><span class="t">12:15</span><span class="what">受付開始</span></li>
+        <li class="p1"><span class="t">13:00</span><span class="what"><span class="tag">企画1</span>親子で<wbr>参加！<wbr>みんなで<wbr>交流ダンス体験会</span></li>
+        <li class="p2"><span class="t">15:15</span><span class="what"><span class="tag">企画2</span>子ども向け<wbr>キャリア教育授業<wbr><span class="nw">＋リール撮影企画</span></span></li>
+        <li><span class="t">16:45</span><span class="what">終了</span></li>
+      </ol>
+
+      <div class="programs">
+        <!-- 企画1 -->
+        <article class="prog prog--1" aria-labelledby="p1-title">
+          <div class="prog-head">
+            <div class="prog-meta">
+              <span class="prog-no">企画<i>1</i></span>
+              <span class="prog-time">13:00〜15:00</span>
+              <span class="prog-dur">所要時間 2時間</span>
+            </div>
+            <h3 id="p1-title" class="prog-title">親子で<wbr>参加！<br>みんなで<wbr>交流ダンス体験会</h3>
+            <p class="prog-lead">CHIBI&nbsp;UNITYの<wbr>メンバーと<wbr>一緒に、<wbr>音楽に<wbr>合わせて身体を<wbr>動かしながら、<wbr>親子や<wbr>仲間と<wbr>楽しむ<wbr>2時間。<wbr>ダンスが<wbr>はじめてでも<wbr>大丈夫です！</p>
+          </div>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-no" aria-hidden="true">1</span>
+              <h4>CHIBI&nbsp;UNITYの<wbr>紹介<small>15分</small></h4>
+              <div class="step-body">
+                <p>まずは<wbr>講師の<wbr>CHIBI&nbsp;UNITYの<wbr>メンバーを<wbr>紹介。<wbr>国内外で<wbr>活躍する<wbr>ダンスチームの<wbr>パフォーマンスを<wbr>間近で<wbr>体感できるかも!?</p>
+                <img src="assets/img/prog1-intro.jpg" alt="体育館でCHIBI&nbsp;UNITYのパフォーマンスを見る子どもたち" width="379" height="244" loading="lazy">
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">2</span>
+              <h4>ウォーミングアップ・<wbr>ストレッチ<small>30分</small></h4>
+              <div class="step-body">
+                <div style="display:grid;gap:6px">
+                  <p>関節の<wbr>動く<wbr>範囲を<wbr>広げる<wbr>簡単な<wbr>ストレッチと、<wbr>音楽の<wbr>リズムに<wbr>合わせた<wbr>楽しい<wbr>ウォーミングアップ。</p>
+                  <p class="hand">リズムに<wbr>合わせる<wbr>ことが<wbr>苦手でも<wbr>大丈夫です！</p>
+                </div>
+                <img src="assets/img/prog1-warmup.jpg" alt="講師と一緒にストレッチをする子どもたち" width="348" height="261" loading="lazy">
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">3</span>
+              <h4>振り付けレクチャー<small>45分</small></h4>
+              <div class="step-body">
+                <div style="display:grid;gap:6px">
+                  <p>初心者や<wbr>保護者の<wbr>方でも<wbr>楽しめる<wbr>簡単な<wbr>振り付けを<wbr>覚えて、<wbr>音楽に<wbr>合わせてみんなで<wbr>練習します。</p>
+                  <p class="hand">CHIBI&nbsp;UNITYの<wbr>メンバーが<wbr>しっかり<wbr>サポートしてくれます！</p>
+                </div>
+                <img src="assets/img/prog1-choreo.jpg" alt="講師の振り付けをまねして踊る子どもたち" width="349" height="262" loading="lazy">
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">4</span>
+              <h4>交流ダンス・<wbr>コミュニケーション<small>30分</small></h4>
+              <div class="step-body">
+                <p>少人数で<wbr>円に<wbr>なり、<wbr>コミュニケーションを<wbr>とりながらダンス。<wbr>メンバーを<wbr>入れ替えて<wbr>何度か<wbr>踊り、<wbr>参加者同士の<wbr>交流を<wbr>深めます。<wbr>最後は<wbr>全員で<wbr>大きな<wbr>円を<wbr>作って<wbr>一体感を<wbr>楽しみます。</p>
+                <img src="assets/img/prog1-circle.jpg" alt="講師とハイタッチする子どもたち" width="602" height="280" loading="lazy">
+              </div>
+            </li>
+          </ol>
+        </article>
+
+        <!-- 企画2 -->
+        <article class="prog prog--2" aria-labelledby="p2-title">
+          <div class="prog-head">
+            <div class="prog-meta">
+              <span class="prog-no">企画<i>2</i></span>
+              <span class="prog-time">15:15〜16:45</span>
+              <span class="prog-dur">所要時間 1時間30分</span>
+            </div>
+            <h3 id="p2-title" class="prog-title">子ども向け<wbr>キャリア教育授業<br>＋リール撮影企画！</h3>
+            <p class="prog-lead">ダンスを<wbr>通して、<wbr>自分の<wbr>可能性や<wbr>夢に<wbr>ついて<wbr>考える<wbr>キャリア教育と、<wbr>CHIBI&nbsp;UNITYの<wbr>メンバーと<wbr>一緒に<wbr>動画制作を<wbr>体験する<wbr>プログラムです。</p>
+          </div>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-no" aria-hidden="true">1</span>
+              <h4>キャリア教育授業<small>30分</small></h4>
+              <div class="step-body">
+                <p>2017年の<wbr>結成から<wbr>今に<wbr>至るまでの<wbr>国内外での<wbr>活動経験を、<wbr>挑戦の<wbr>過程や<wbr>成功・<wbr>失敗も<wbr>含めて<wbr>お話しします。<wbr>リアルな<wbr>経験談を<wbr>通して、<wbr>夢に<wbr>向かって<wbr>行動する<wbr>大切さを<wbr>伝えます。</p>
+                <img src="assets/img/prog2-career.jpg" alt="マイクを持って子どもたちに話すCHIBI&nbsp;UNITYのメンバー" width="603" height="258" loading="lazy">
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">2</span>
+              <h4>リール撮影企画<small>30分</small></h4>
+              <div class="step-body">
+                <p>CHIBI&nbsp;UNITYが<wbr>普段<wbr>行っている<wbr>ダンス動画<wbr>（リール）の<wbr>撮影を<wbr>体験。<wbr>プロの<wbr>メンバーと<wbr>一緒に<wbr>作品を<wbr>つくり、<wbr>自分を<wbr>表現する<wbr>楽しさや、<wbr>仲間と<wbr>ひとつの<wbr>作品を<wbr>仕上げる<wbr>達成感を<wbr>味わいます。<wbr>撮影した<wbr>動画は<wbr>CHIBI&nbsp;UNITYの<wbr>Instagramにも<wbr>投稿予定です。</p>
+                <img src="assets/img/prog2-reel.jpg" alt="スマートフォンでダンスを撮影している様子" width="326" height="434" loading="lazy">
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">3</span>
+              <h4>質疑応答<small>15分</small></h4>
+              <div class="step-body no-photo">
+                <p>子ども<wbr>たちや<wbr>保護者の<wbr>方からの<wbr>質問に<wbr>直接答えながら、<wbr>将来や<wbr>夢に<wbr>ついて<wbr>考える<wbr>きっかけを<wbr>つくります。</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">4</span>
+              <h4>20歳の<wbr>自分へ<wbr>手紙を<wbr>書く<small>15分</small></h4>
+              <div class="step-body">
+                <p>この<wbr>授業で<wbr>学んだ<wbr>ことを<wbr>生かし、<wbr>将来の<wbr>理想の<wbr>自分を<wbr>思い<wbr>描きながら<wbr>20歳の<wbr>自分へ<wbr>手紙を<wbr>書きます。<wbr>今の<wbr>気持ちを<wbr>言葉に<wbr>して、<wbr>未来への<wbr>一歩を<wbr>踏み出すきっかけにします。</p>
+                <img src="assets/img/prog2-letter.jpg" alt="「20歳の自分へ」と書かれた用紙に手紙を書く子ども" width="602" height="281" loading="lazy">
+              </div>
+            </li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHIBI&nbsp;UNITY ===== -->
+  <section id="chibi-unity" class="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="about-title" class="en">GUEST</h2>
+        <p class="ja">特別講師の<wbr>紹介</p>
+      </div>
+      <div class="panel">
+        <figure class="about-photo" style="margin:0">
+          <img src="assets/img/chibi-group.jpg" alt="ステージで笑顔を見せるCHIBI&nbsp;UNITYのメンバー" width="796" height="549" loading="lazy">
+        </figure>
+        <div>
+          <div class="about-name">
+            <span class="kana">チビユニティ</span>
+            <h3>CHIBI&nbsp;UNITY<wbr>とは？</h3>
+          </div>
+          <p class="about-lead">世界を<wbr>舞台に<wbr>活躍する、<wbr>注目の<wbr>ダンスチーム。</p>
+          <p class="about-text">国内外の<wbr>ダンスコンテストで<wbr>数々の<wbr>実績を<wbr>持ち、<wbr>世界中で<wbr>放送されている<wbr>人気の<wbr>公開オーディション番組<wbr><span class="nw">「ゴット・タレント</span><wbr><span class="nw">（Got Talent）」</span><wbr>シリーズで<wbr><span class="nw">ゴールデンブザー</span><wbr>を<wbr>獲得するなど、<wbr>世界からも<wbr>高く<wbr>評価されています。<wbr>キッズから<wbr>大人まで<wbr>幅広い<wbr>世代に<wbr>ダンスの<wbr>魅力を<wbr>届ける<wbr>活動を<wbr>続け、<wbr>ダンスを<wbr>通して<wbr>「挑戦する<wbr>ことの<wbr>大切さ」や<wbr>「自分らしく<wbr>表現する<wbr>楽しさ」を<wbr>伝えています。</p>
+          <ul class="facts">
+            <li><span class="k">結成</span><span class="v">2017年</span></li>
+            <li><span class="k">世界大会</span><span class="v">4年連続出場・<wbr>4連覇</span></li>
+            <li><span class="k">ゴット・<wbr>タレント</span><span class="v">ゴールデンブザー獲得</span></li>
+            <li><span class="k">地域での<wbr>活動</span><span class="v">学校訪問事業の<wbr>講師</span></li>
+          </ul>
+          <div class="links">
+            <a class="link-pill" href="https://www.instagram.com/chibiunity_official/" target="_blank" rel="noopener">Instagramを<wbr>見る<span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="mid-cta">
+        <p class="mid-cta-text"><b>親子で<wbr>「楽しい」を<wbr>体験しませんか？</b><span>参加費無料・<wbr>定員200名<wbr>（先着順）</span></p>
+        <a class="btn btn--lg" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">参加を<wbr>申し込む<span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SAFETY ===== -->
+  <section id="safety" class="section" aria-labelledby="safety-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="en" aria-hidden="true">SAFETY</p>
+        <h2 id="safety-title" class="ja">安心して<wbr>参加いただく<wbr>ために</h2>
+      </div>
+      <div class="panel">
+        <ul class="safety safety--grid">
+          <li><span class="ico" aria-hidden="true">50</span><span><b>50名ずつ<wbr>4つの<wbr>ブロックに<wbr>分けて<wbr>進行</b>各ブロックに<wbr>サブ講師が<wbr>つき、<wbr>一人<wbr>ひとりに<wbr>目が<wbr>届くようにします。</span></li>
+          <li><span class="ico" aria-hidden="true">ID</span><span><b>ブロックごとに<wbr>責任者と<wbr>リストバンド</b>ブロックごとに<wbr>責任者を<wbr>置き、<wbr>リストバンドで<wbr>参加者を<wbr>確認します。</span></li>
+          <li><span class="ico" aria-hidden="true">→</span><span><b>時間差の<wbr>入場と<wbr>エリア別の<wbr>通路</b>混雑や<wbr>迷子を<wbr>防ぐ<wbr>ため、<wbr>入場時間を<wbr>ずらし、<wbr>エリアごとに<wbr>通路を<wbr>分けます。</span></li>
+          <li><span class="ico" aria-hidden="true">□</span><span><b>会場の<wbr>四隅に<wbr>休憩・<wbr>見学エリア</b>途中で<wbr>ひと<wbr>休みしたい<wbr>ときや、<wbr>小さな<wbr>お子さま連れの<wbr>方も<wbr>ご利用いただけます。</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUTLINE ===== -->
+  <section id="outline" class="section" style="padding-top:0" aria-labelledby="outline-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="outline-title" class="en">OUTLINE</h2>
+        <p class="ja">開催概要</p>
+      </div>
+      <div class="panel">
+        <dl class="info">
+          <div class="info-row"><dt>日時</dt><dd><strong>2026年11月7日<wbr>（土）<wbr>13:00〜16:45</strong><span class="sub">受付開始 12:15／原則と<wbr>して、<wbr>企画1・<wbr>企画2を<wbr>通して<wbr>ご参加ください</span></dd></div>
+          <div class="info-row"><dt>会場</dt><dd>金沢市営中央市民体育館<span class="sub">石川県金沢市長町3丁目3-3</span></dd></div>
+          <div class="info-row"><dt>対象</dt><dd>金沢市内の<wbr>小学生<span class="sub">保護者の<wbr>方も<wbr>一緒に<wbr>参加できます。<wbr>お子さまだけの<wbr>参加も<wbr>できます。</span></dd></div>
+          <div class="info-row"><dt>定員</dt><dd>200名<wbr>（先着順）<span class="sub">ダンスに<wbr>参加する<wbr>保護者の<wbr>方も<wbr>人数に<wbr>含みます</span></dd></div>
+          <div class="info-row"><dt>参加費</dt><dd><strong>無料</strong></dd></div>
+          <div class="info-row"><dt>服装</dt><dd>動きやすい<wbr>格好・<wbr>運動靴<wbr>（屋内用）<span class="sub">※お着替えの<wbr>時間は<wbr>ありませんので<wbr>動きやすい<wbr>格好で<wbr>ご来場ください。</span></dd></div>
+          <div class="info-row"><dt>申込方法</dt><dd>Googleフォームから<wbr>お申し込みください。<span class="sub">申込締切：2026年11月5日<wbr>（木）<wbr>（定員に<wbr>達し次第締め切ります）</span></dd></div>
+          <div class="info-row"><dt>お問い合わせ</dt><dd><a class="mail" href="mailto:2026zaimukisoku@gmail.com?subject=%E3%80%8C%E3%82%AB%E3%83%A9%E3%83%80%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%E3%81%A3%E3%81%A6%20TANO%20C%21%21%E3%80%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">2026zaimukisoku@gmail.com</a></dd></div>
+          <div class="info-row"><dt>主催など</dt><dd>主催：<wbr><span class="nw">公益社団法人金沢青年会議所</span><br>共催：公益信託金沢教育基金<wbr><span class="nw">あすなろファンド</span><br>後援：<wbr><span class="nw">金沢市教育委員会</span></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACCESS ===== -->
+  <section id="access" class="section" style="padding-top:0" aria-labelledby="access-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="access-title" class="en">ACCESS</h2>
+        <p class="ja">会場・<wbr>アクセス</p>
+      </div>
+      <div class="access-grid">
+        <div class="map-frame">
+          <iframe src="https://maps.google.com/maps?q=%E9%87%91%E6%B2%A2%E5%B8%82%E5%96%B6%E4%B8%AD%E5%A4%AE%E5%B8%82%E6%B0%91%E4%BD%93%E8%82%B2%E9%A4%A8%20%E7%9F%B3%E5%B7%9D%E7%9C%8C%E9%87%91%E6%B2%A2%E5%B8%82%E9%95%B7%E7%94%BA3%E4%B8%81%E7%9B%AE3-3&amp;hl=ja&amp;z=16&amp;output=embed" title="金沢市営中央市民体育館の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <div class="access-info">
+          <div class="panel access-panel">
+            <p class="addr">金沢市営中央市民体育館<span>石川県金沢市長町3丁目3-3</span></p>
+            <div class="route">
+              <p class="route-label">バスで<wbr>お越しの<wbr>方</p>
+              <p>JR金沢駅 東口【2番】のりばから、<wbr>北鉄バス<wbr>「幕番82 鳴和増泉線<wbr>（西金沢方面）」に<wbr>乗車<wbr>（約5分）。<b>「長土塀」</b>で<wbr>下車し、<wbr>徒歩約3分です。</p>
+            </div>
+            <a class="link-pill" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%87%91%E6%B2%A2%E5%B8%82%E5%96%B6%E4%B8%AD%E5%A4%AE%E5%B8%82%E6%B0%91%E4%BD%93%E8%82%B2%E9%A4%A8%20%E7%9F%B3%E5%B7%9D%E7%9C%8C%E9%87%91%E6%B2%A2%E5%B8%82%E9%95%B7%E7%94%BA3%E4%B8%81%E7%9B%AE3-3" target="_blank" rel="noopener">Googleマップで<wbr>開く<span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="warn">
+            <h3>当日の<wbr>交通手段に<wbr>ついて<wbr>重要な<wbr>お願い</h3>
+            <div class="parking"><span class="lbl">体育館の<wbr>駐車場は<wbr>全</span><span class="num">30</span><span class="lbl">台のみ</span></div>
+            <p>近くの<wbr>コインパーキングにも<wbr>限りが<wbr>あります。<wbr>当日は<em>公共交通機関の<wbr>ご利用</em>を<wbr>お願いします。<wbr>また、<wbr>受付時間の<wbr>終わり<wbr>ごろは<wbr>混み合うことが<wbr>予想されますので、<wbr>お早めに<wbr>受付を<wbr>お済ませ<wbr>ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section" style="padding-top:0" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="faq-title" class="en">Q&amp;A</h2>
+        <p class="ja">よく<wbr>ある<wbr>質問</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary><span class="q">Q</span>ダンスを<wbr>した<wbr>ことがなくても<wbr>参加できますか？<span class="plus" aria-hidden="true">+</span></summary>
+          <p class="a">はい。<wbr>ダンス未経験の<wbr>子が<wbr>主役の<wbr>イベントです。<wbr>リズムに<wbr>合わせるのが<wbr>苦手でも<wbr>大丈夫。<wbr>CHIBI&nbsp;UNITYの<wbr>メンバーが<wbr>しっかり<wbr>サポートします。</p>
+        </details>
+        <details>
+          <summary><span class="q">Q</span>保護者も<wbr>一緒に<wbr>踊れますか？<span class="plus" aria-hidden="true">+</span></summary>
+          <p class="a">はい。<wbr>企画1<wbr>「親子で<wbr>参加！<wbr>みんなで<wbr>交流ダンス体験会」は、<wbr>保護者の<wbr>方も<wbr>一緒に<wbr>楽しめる<wbr>内容です。<wbr>初心者の<wbr>方でも<wbr>覚えられる<wbr>簡単な<wbr>振り付けを<wbr>練習します。<wbr>ダンスに<wbr>参加する<wbr>保護者の<wbr>方も、<wbr>定員200名に<wbr>含みます。</p>
+        </details>
+        <details>
+          <summary><span class="q">Q</span>子どもだけで<wbr>参加できますか？<span class="plus" aria-hidden="true">+</span></summary>
+          <p class="a">はい、<wbr>お子さまだけでも<wbr>参加できます。</p>
+        </details>
+        <details>
+          <summary><span class="q">Q</span>企画1だけ、<wbr>企画2だけの<wbr>参加も<wbr>できますか？<span class="plus" aria-hidden="true">+</span></summary>
+          <p class="a">原則と<wbr>して、<wbr>企画1と<wbr>企画2を<wbr>通して<wbr><span class="nw">（13:00〜16:45）</span><wbr>ご参加ください。</p>
+        </details>
+        <details>
+          <summary><span class="q">Q</span>車で<wbr>行っても<wbr>いいですか？<span class="plus" aria-hidden="true">+</span></summary>
+          <p class="a">体育館の<wbr>駐車場は<wbr>30台しかなく、<wbr>近くの<wbr>コインパーキングにも<wbr>限りが<wbr>あります。<wbr>できるだけ公共交通機関を<wbr>ご利用ください。</p>
+        </details>
+        <details>
+          <summary><span class="q">Q</span>途中で<wbr>休憩できますか？<span class="plus" aria-hidden="true">+</span></summary>
+          <p class="a">会場の<wbr>四隅に<wbr>休憩・<wbr>見学エリアを<wbr>用意しています。<wbr>疲れた<wbr>ときや、<wbr>小さな<wbr>お子さま連れの<wbr>方も<wbr>ご利用ください。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING CTA ===== -->
+  <section class="closing section" aria-labelledby="closing-title">
+    <div class="blob blob--teal" aria-hidden="true"></div>
+    <div class="blob blob--orange" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="closing-card">
+        <img src="assets/img/logo-tanoc.webp" alt="" width="1200" height="387" style="width:min(100%,360px)" loading="lazy">
+        <h2 id="closing-title" class="hand">たのしい<wbr>時間を<wbr>一緒に<wbr>つくろう!!</h2>
+        <p class="facts-line"><span class="nw">2026年11月7日（土）</span> <span class="nw">金沢市営中央市民体育館</span><br><span class="nw">参加費無料・先着200名</span></p>
+        <a class="btn btn--lg" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">参加を<wbr>申し込む<span class="arrow" aria-hidden="true">→</span></a>
+        <p class="contact">お問い合わせ：<a class="mail" href="mailto:2026zaimukisoku@gmail.com?subject=%E3%80%8C%E3%82%AB%E3%83%A9%E3%83%80%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%E3%81%A3%E3%81%A6%20TANO%20C%21%21%E3%80%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">2026zaimukisoku@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="org">
+      <span><b>主催</b>公益社団法人<wbr>金沢青年会議所</span>
+      <span><b>共催</b>公益信託金沢教育基金あすなろファンド</span>
+      <span><b>後援</b>金沢市教育委員会</span>
+    </p>
+    <small>© 2026 公益社団法人<wbr>金沢青年会議所</small>
+  </div>
+</footer>
+
+<div class="fixed-cta" role="region" aria-label="参加の申し込み">
+  <div class="fc-stub" aria-hidden="true"><b>11/7</b><span>土</span></div>
+  <div class="fc-info">
+    <p class="fc-main">参加費無料<span class="fc-dot" aria-hidden="true">／</span>先着200名</p>
+    <p class="fc-sub">締切 11/5<wbr>（木）<b id="fc-count"></b></p>
+  </div>
+  <a class="btn fc-btn" href="https://forms.gle/Q1gdTKtW6GX4kyx68" target="_blank" rel="noopener">申し込む<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+
+
+<script>
+(function () {
+  // 申込締切までの日数（日本時間の日付で数える）
+  var count = document.getElementById('fc-count');
+  if (count) {
+    var now = new Date(Date.now() + 9 * 3600e3);
+    var today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+    var days = Math.round((Date.UTC(2026, 10, 5) - today) / 864e5);
+    count.textContent = days > 0 ? 'あと' + days + '日' : days === 0 ? '本日締切' : '';
+  }
+  if (!('IntersectionObserver' in window)) return;
+
+  // 画面内に別の申込ボタンが見えている間は、下のチケットを隠す
+  var bar = document.querySelector('.fixed-cta');
+  var others = [document.querySelector('.hero-cta'), document.querySelector('.closing-card')].filter(Boolean);
+  if (bar && others.length) {
+    var inView = new Set();
+    var watch = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? inView.add(e.target) : inView.delete(e.target); });
+      bar.classList.toggle('is-away', inView.size > 0);
+    });
+    others.forEach(function (el) { watch.observe(el); });
+  }
+
+  // スクロールで各ブロックを持ち上げる（最初から見えている分はそのまま）
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var targets = document.querySelectorAll('.sec-head, .benefit, .intro .panel, .timeline, .prog-head, .step, .message-photo, .message-copy, .about .panel, .mid-cta, .safety li, .info-row, .map-frame, .access-info, .faq details, .closing-card');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  targets.forEach(function (el) {
+    if (el.getBoundingClientRect().top < innerHeight) return;
+    var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+    el.style.transitionDelay = (i % 4) * 70 + 'ms';
+    el.classList.add('rv');
+    io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
