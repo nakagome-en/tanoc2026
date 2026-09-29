@@ -664,6 +664,14 @@ section{scroll-margin-top:72px}
 /* ---------- footer ---------- */
 .site-footer{background:var(--ink);color:#F4EEE6;padding-block:36px calc(112px + env(safe-area-inset-bottom,0px));font-size:14px}
 @media (min-width:880px){.site-footer{padding-bottom:40px}}
+.footer-logos{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;width:fit-content;max-width:100%;
+  background:#fff;border-radius:16px;padding:14px 22px;margin:0 0 22px;
+}
+.flogo{margin:0;display:flex;align-items:center;gap:12px}
+.flogo figcaption{font-size:12px;font-weight:900;color:var(--ink-2);letter-spacing:.1em;writing-mode:vertical-rl;border-left:1.5px solid var(--line);padding-left:6px;line-height:1}
+.flogo--jci img{width:min(340px,58vw);height:auto}
+.flogo--asunaro img{width:auto;height:88px}
 .site-footer .org{display:grid;gap:4px;line-height:1.7}
 .site-footer .org b{display:inline-block;min-width:3.5em;color:var(--yellow);font-weight:700}
 .site-footer small{display:block;margin-top:18px;color:#B9AFA4}
@@ -1269,6 +1277,10 @@ section{scroll-margin-top:72px}
 
 <footer class="site-footer">
   <div class="wrap">
+    <div class="footer-logos">
+      <figure class="flogo flogo--jci"><figcaption>主催</figcaption><img src="assets/img/jci-kanazawa.webp" alt="公益社団法人 金沢青年会議所（JCI Kanazawa）" width="1200" height="139" loading="lazy"></figure>
+      <figure class="flogo flogo--asunaro"><figcaption>共催</figcaption><img src="assets/img/asunaro-fund.webp" alt="公益信託 金沢教育基金 あすなろファンド" width="480" height="669" loading="lazy"></figure>
+    </div>
     <p class="org">
       <span><b>主催</b>公益社団法人<wbr>金沢青年会議所</span>
       <span><b>共催</b>公益信託金沢教育基金あすなろファンド</span>
